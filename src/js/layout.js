@@ -17,6 +17,9 @@ import injectContext from "./store/appContext.js";
 import { Navbar } from "./component/navbar.js";
 import { Footer } from "./component/footer.js";
 
+import BaseLayoutRoute from "./layouts/base.js";
+import AdminLayoutRoute from "./layouts/admin_layout.js";
+
 //create your first component
 export class Layout extends React.Component {
 	componentDidMount() {
@@ -34,11 +37,13 @@ export class Layout extends React.Component {
 				<BrowserRouter basename={basename}>
 					<ScrollToTop>
 						<Switch>
-							<Route exact path="/" component={Home} />
+							<BaseLayoutRoute exact path="/" component={Home} />
 							<Route path="/demo" component={Demo} />
 							<Route path="/single/:theid" component={Single} />
 
-							<Route path="/bartender/list" component={BartenderList} />
+							<BaseLayoutRoute path="/bartender/list" component={BartenderList} />
+
+							<AdminLayoutRoute path="/admin/view/users" component={Navbar} />
 
 							<Route path="/admin/view" component={AdminView} />
 
