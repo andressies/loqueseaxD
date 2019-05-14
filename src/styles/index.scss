@@ -7,9 +7,27 @@ $primary-color: rgba(255,255,255,1) !default;
 $secondary-color: rgba(255,255,255,1) !default;
 
 
-@import 'node_modules/materialize-css/sass/materialize.scss'
+@import 'node_modules/materialize-css/sass/materialize.scss';
 
-
+$bg-color-lighten-4: #cfd8dc;
+$bg-color-lighten-2: #90a4ae;
+$bg-color-dark: #546e7a;
+.asdasd{
+    height: 420px;
+    width: 900px;
+    border: solid;
+    float: right;
+    background-color: $bg-color-lighten-4;
+    
+    
+   
+}
+#menu{
+    
+    i{
+        color: black;
+    }
+}
 
 /* 
     General Styles
