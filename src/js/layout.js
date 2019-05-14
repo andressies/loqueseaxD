@@ -6,9 +6,8 @@ import ScrollToTop from "./component/scrollToTop";
 
 import { Home } from "./views/home.js";
 import { AdminView } from "./views/admin_view.js";
-import { Demo } from "./views/demo.js";
+
 import { Single } from "./views/single.js";
-import { BartenderList } from "./views/bartender_list.js";
 import { CategoriaView } from "./views/categoria_view.js";
 import { Drinks } from "./views/drinks.js";
 
@@ -37,10 +36,8 @@ export class Layout extends React.Component {
 
 						<Switch>
 							<Route exact path="/" component={Home} />
-							<Route path="/demo" component={Demo} />
-							<Route path="/single/:theid" component={Single} />
 
-							<Route path="/bartender/list" component={BartenderList} />
+							<Route path="/single/:theid" component={Single} />
 
 							<Route path="/admin/view" component={AdminView} />
 
