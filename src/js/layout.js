@@ -36,19 +36,15 @@ export class Layout extends React.Component {
 				<BrowserRouter basename={basename}>
 					<ScrollToTop>
 						<Switch>
-
 							<BaseLayoutRoute exact path="/" component={Home} />
-							
-							<Route path="/single/:theid" component={Single} />
 
-						
+							<Route path="/single/:theid" component={Single} />
 
 							<AdminLayoutRoute path="/admin/view/users" component={Navbar} />
 
 							<Route exact path="/" component={Home} />
 
 							<Route path="/single/:theid" component={Single} />
-
 
 							<Route path="/admin/view" component={AdminView} />
 

@@ -25,6 +25,9 @@ $bg-color-dark: #546e7a;
 
 .layout-external {
     height: 100vh;
+    .content-le {
+        width: 100%;
+    }
 }
 #menu{
     
@@ -34,6 +37,16 @@ $bg-color-dark: #546e7a;
 }
 .user_login_img{
     margin: auto;
+}
+#text_color_input{
+    color: black;
+}
+#icon_prefix{
+   
+    
+}
+.check_admin_user{
+    float: right;
 }
 
 /* 
