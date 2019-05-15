@@ -8,7 +8,7 @@ export class Home extends React.Component {
 			<div className="valign-wrapper layout-external center-align ">
 				<div className="row content-le">
 					<div className="col s12 m6 offset-m3 l4 offset-l4">
-						<div className="card hoverable #f1f8e9 light-green lighten-5">
+						<div id="card_login" className="card hoverable #f1f8e9 light-green lighten-5">
 							<div className="card-content ">
 								<div className="row">
 									<div className="col s12">
@@ -36,7 +36,7 @@ export class Home extends React.Component {
 												</label>
 											</div>
 											<div className="input-field left-align col s12 ">
-												<p className="col s6">
+												<p className="col s6 ">
 													<label>
 														<input
 															type="checkbox"
@@ -57,10 +57,11 @@ export class Home extends React.Component {
 													</label>
 												</p>
 											</div>
-											<a className="btn-floating btn-large pulse">
+											<a className="btn-floating btn-large pulse waves-effect waves-green">
 												<i className="material-icons fas fa-sign-in-alt" />
 											</a>
 										</form>
+										<a className="right">registrarse</a>
 									</div>
 								</div>
 							</div>

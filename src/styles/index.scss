@@ -18,6 +18,7 @@ $bg-color-dark: #546e7a;
     border: solid;
     float: right;
     background-color: $bg-color-lighten-4;
+     border-radius: 15px;
     
     
    
@@ -29,9 +30,14 @@ $bg-color-dark: #546e7a;
         width: 100%;
     }
 }
+#menu1{
+    border-radius: 15px;
+}
 #menu{
     
+    
     i{
+        
         color: black;
     }
 }
@@ -45,9 +51,49 @@ $bg-color-dark: #546e7a;
    
     
 }
-.check_admin_user{
-    float: right;
+#card_login{
+    border-radius: 25px;
+  
 }
+
+#cerveza_img{
+    height: 100px;
+        width: 100px;
+        border: solid;
+        border-radius: 15px;
+        color: white;
+        background-color: #cfd8dc;
+}
+
+#cerveza_icono{
+    height: 110px;
+        width: 110px;
+       border: solid;
+       
+       
+       
+}
+#menu_client{
+    float: left;
+}
+.card-action{
+    border-radius: 15px;
+    
+}
+.carousel{
+    height: 100px;
+}
+    
+
+    
+
+    
+
+   
+
+//.check_admin_user{
+ //   float: right;
+//}
 
 /* 
     General Styles

@@ -28,9 +28,9 @@ export class Navbar extends React.Component {
 							/>
 							User
 						</a>
-						<ul className="right ">
+						<ul className="right hoverable ">
 							<li>
-								<a className="dropdown-trigger" href="#!" data-target="dropdown1">
+								<a className="dropdown-trigger " href="#!" data-target="dropdown1">
 									<i className="material-icons right">
 										<i className="fas fa-cog" />
 									</i>
