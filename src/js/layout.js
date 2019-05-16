@@ -7,6 +7,8 @@ import ScrollToTop from "./component/scrollToTop";
 import { Home } from "./views/home.js";
 import { AdminView } from "./views/admin_view.js";
 
+import { BartenderView } from "./views/bartender_view.js";
+
 import { Single } from "./views/single.js";
 import { CategoriaView } from "./views/categoria_view.js";
 import { Drinks } from "./views/drinks.js";
@@ -41,6 +43,8 @@ export class Layout extends React.Component {
 							<Route path="/single/:theid" component={Single} />
 
 							<AdminLayoutRoute path="/admin/view/users" component={Navbar} />
+
+							<Route path="/bartender/view" component={BartenderView} />
 
 							<Route exact path="/" component={Home} />
 
