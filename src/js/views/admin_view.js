@@ -6,78 +6,83 @@ import { Navbar } from "../component/navbar.js";
 export class AdminView extends React.Component {
 	render() {
 		return (
-			<div>
+			<div id="general_admin_view">
 				<Navbar />
 				<div>
 					<br />
 				</div>
+				<div>
+					<ul id="slide-out" className="sidenav">
+						<li>
+							<div className="user-view">
+								<div className="background">
+									<img
+										id="img_menu"
+										src="https://cdn.buenosairesconnect.com/wp-content/uploads/2017/08/presidente-boost.jpg"
+									/>
+								</div>
+								<a href="#user">
+									<img
+										className="circle hoverable"
+										src="https://miabogadoenlinea.net/images/Jack%20Sparrow.jpg"
+									/>
+								</a>
+								<a href="#name">
+									<span className="white-text name">Jack Sparrow</span>
+								</a>
+								<a href="#email">
+									<span className="white-text email">jSparrow@gmail.com</span>
+								</a>
+							</div>
+						</li>
+						<li>
+							<a className="subheader">Menu</a>
+						</li>
+						<li>
+							<a href="#!">
+								<i className="material-icons fas fa-users" />
+								Users
+							</a>
+						</li>
+						<li>
+							<a href="#!">Bartender</a>
+						</li>
+						<li>
+							<a href="#!">Carta</a>
+						</li>
+						<li>
+							<a href="#!">Mesas</a>
+						</li>
+						<li>
+							<div className="divider" />
+						</li>
+						<li>
+							<a className="subheader">Finanzas</a>
+						</li>
+						<li>
+							<a className="waves-effect" href="#!">
+								promociones
+							</a>
+						</li>
+						<li>
+							<a className="waves-effect" href="#!">
+								inventario
+							</a>
+						</li>
+						<li>
+							<a className="waves-effect" href="#!">
+								ventas
+							</a>
+						</li>
+					</ul>
+					<a href="#" data-target="slide-out" className="sidenav-trigger">
+						<img
+							className="button_menu"
+							src="https://cdn4.iconfinder.com/data/icons/circles-1/32/364-01-512.png"
+						/>
+					</a>
 
-				<div id="menu" className="row ">
-					<div className="col s3">
-						<ul id="menu1" className="collection with-header hoverable ">
-							<li className="collection-header #546e7a blue-grey darken-1 hoverable ">
-								<h4>Menu</h4>
-							</li>
-							<li className="collection-item #90a4ae blue-grey lighten-2 hoverable ">
-								<div>
-									Users
-									<a href="#!" className="secondary-content">
-										<i className="material-icons fas fa-angle-right " />
-									</a>
-								</div>
-							</li>
-							<li className="collection-item #90a4ae blue-grey lighten-2 hoverable">
-								<div>
-									Bartender
-									<a href="#!" className="secondary-content">
-										<i className="material-icons fas fa-angle-right" />
-									</a>
-								</div>
-							</li>
-							<li className="collection-item #90a4ae blue-grey lighten-2 hoverable">
-								<div>
-									Carta
-									<a href="#!" className="secondary-content">
-										<i className="material-icons fas fa-angle-right" />
-									</a>
-								</div>
-							</li>
-							<li className="collection-item #90a4ae blue-grey lighten-2 hoverable">
-								<div>
-									Mesas
-									<a href="#!" className="secondary-content">
-										<i className="material-icons fas fa-angle-right" />
-									</a>
-								</div>
-							</li>
-							<li className="collection-item #90a4ae blue-grey lighten-2 hoverable">
-								<div>
-									Alvin
-									<a href="#!" className="secondary-content">
-										<i className="material-icons fas fa-angle-right" />
-									</a>
-								</div>
-							</li>
-							<li className="collection-item #90a4ae blue-grey lighten-2 hoverable">
-								<div>
-									Alvin
-									<a href="#!" className="secondary-content">
-										<i className="material-icons fas fa-angle-right" />
-									</a>
-								</div>
-							</li>
-							<li className="collection-item #90a4ae blue-grey lighten-2 hoverable">
-								<div>
-									Alvin
-									<a href="#!" className="secondary-content">
-										<i className="material-icons fas fa-angle-right" />
-									</a>
-								</div>
-							</li>
-						</ul>
-					</div>
-
-					<div className="asdasd col s9 " />
+					<div className="asdasd col s9  " />
 				</div>
 			</div>
 		);

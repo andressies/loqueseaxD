@@ -5,45 +5,60 @@ import PropTypes from "prop-types";
 export class CategoriaView extends React.Component {
 	render() {
 		return (
-			<div className="row">
+			<div id="general" className="row">
 				<div className="col s12 m12 center-align">
 					<div className="card">
 						<div className="card-image">
-							<img src="" />
+							<img className="fondo_img" src="" />
+							<div className="left-align" id="promociones">
+								<p className="left-align">Welcome to</p>
+								&nbsp; &nbsp;
+								<div id="best_bar">
+									<h5 className="right-align">The Best Bar</h5>
+								</div>
+							</div>
+							<br />
 
-							<div id="carousel_id center-align">
+							<div id="promociones">
+								<h5 className="left-align">Promociones</h5>
+							</div>
+							<div id="carousel_id ">
 								<div className="carousel  ">
 									<a className="carousel-item valign-wrapper" href="#one!">
-										<img src="https://lorempixel.com/250/250/nature/1" />
+										<img src="https://static.vix.com/es/sites/default/files/imj/elgrancatador/t/tragos-aperitivos-peruanos-1.jpg" />
 									</a>
+
 									<a className="carousel-item valign-wrapper" href="#two!">
-										<img src="https://lorempixel.com/250/250/nature/2" />
+										<img src="https://img.elcomercio.pe/files/ec_article_multimedia_gallery/uploads/2018/02/09/5a7dc529493b1.jpeg" />
 									</a>
+
 									<a className="carousel-item valign-wrapper" href="#three!">
-										<img src="https://lorempixel.com/250/250/nature/3" />
+										<img src="https://loff.it/wp-content/uploads/2018/08/loffit-10-tragos-espirituosos-para-celebrar-el-verano-01-600x450-1533135950.jpeg" />
 									</a>
+
 									<a className="carousel-item valign-wrapper" href="#four!">
-										<img src="https://lorempixel.com/250/250/nature/4" />
+										<img src="https://lifestyle.americaeconomia.com/sites/lifestyle.americaeconomia.com/files/styles/gallery_image/public/trago_celeste_0.jpg?itok=XUY17HaK" />
 									</a>
+
 									<a className="carousel-item valign-wrapper" href="#five!">
-										<img src="https://lorempixel.com/250/250/nature/5" />
+										<img src="http://www.holamujer.cl/wp-content/uploads/2017/02/Pi%C3%B1aColada.jpg" />
 									</a>
 								</div>
 							</div>
 						</div>
 
-						<div className="card-action #757575 grey darken-1">
-							<div className="">
+						<div className="card-action #000000 black ">
+							<div className="text_menu">
 								<h5>Menu</h5>
 							</div>
 							<br />
 							<br />
 
 							<div id="cerveza_icono " className="row">
-								<div className=" col s6 m6 l6">
+								<div className=" col s6 m6 l6 ">
 									<a>
 										<img
-											className="hoverable   "
+											className="hoverable "
 											id="cerveza_img"
 											src="https://i1.wp.com/fermentumcr.com/wp-content/uploads/2018/06/cropped-icono-cerveza-2.png?ssl=1"
 										/>
