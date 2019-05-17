@@ -38,6 +38,7 @@ export class AdminView extends React.Component {
 						<li>
 							<a className="subheader">Menu</a>
 						</li>
+						<div className="divider" />
 						<li>
 							<a href="#!">
 								<i className="material-icons fas fa-users" />
@@ -45,13 +46,23 @@ export class AdminView extends React.Component {
 							</a>
 						</li>
 						<li>
-							<a href="#!">Bartender</a>
+							<a href="#!">
+								<i className="fas fa-user-tie" />
+								Bartender
+							</a>
 						</li>
 						<li>
-							<a href="#!">Carta</a>
+							<a href="#!">
+								{" "}
+								<i className="fas fa-book-open" />
+								Carta
+							</a>
 						</li>
 						<li>
-							<a href="#!">Mesas</a>
+							<a href="#!">
+								<i className="fas fa-couch" />
+								Mesas
+							</a>
 						</li>
 						<li>
 							<div className="divider" />
@@ -74,15 +85,14 @@ export class AdminView extends React.Component {
 								ventas
 							</a>
 						</li>
-					</ul>
-					<a href="#" data-target="slide-out" className="sidenav-trigger">
-						<img
-							className="button_menu"
-							src="https://cdn4.iconfinder.com/data/icons/circles-1/32/364-01-512.png"
-						/>
-					</a>
+						<div className="divider" />
 
-					<div className="asdasd col s9  " />
+						<li>
+							<a className="waves-effect" href="#!">
+								cerrar sesion
+							</a>
+						</li>
+					</ul>
 				</div>
 			</div>
 		);

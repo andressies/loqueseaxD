@@ -12,6 +12,7 @@ import { BartenderView } from "./views/bartender_view.js";
 import { Single } from "./views/single.js";
 import { CategoriaView } from "./views/categoria_view.js";
 import { Drinks } from "./views/drinks.js";
+import { RegisterView } from "./views/register_view.js";
 
 import injectContext from "./store/appContext.js";
 
@@ -45,6 +46,8 @@ export class Layout extends React.Component {
 							<AdminLayoutRoute path="/admin/view/users" component={Navbar} />
 
 							<Route path="/bartender/view" component={BartenderView} />
+
+							<Route path="/register/view" component={RegisterView} />
 
 							<Route exact path="/" component={Home} />
 

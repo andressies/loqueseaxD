@@ -58,7 +58,7 @@ export class CategoriaView extends React.Component {
 								<div className=" col s6 m6 l6 ">
 									<a>
 										<img
-											className="hoverable "
+											className="hoverable"
 											id="cerveza_img"
 											src="https://i1.wp.com/fermentumcr.com/wp-content/uploads/2018/06/cropped-icono-cerveza-2.png?ssl=1"
 										/>

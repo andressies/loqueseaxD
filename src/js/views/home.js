@@ -14,7 +14,7 @@ export class Home extends React.Component {
 									<div className="col s12">
 										<img
 											className="user_login_img"
-											src="https://cdn.iconscout.com/icon/free/png-256/account-profile-avatar-man-circle-round-user-30452.png"
+											src="https://image.flaticon.com/icons/png/512/993/993222.png"
 											height="100"
 											width="100"
 										/>
