@@ -66,6 +66,12 @@ $bg-color-dark: #546e7a;
         background-color: #66666E;
 }
 
+#tooltipped{
+    background-color: black;
+    
+    width: 100px;
+}
+
 #cerveza_icono{
     height: 110px;
         width: 110px;
@@ -90,7 +96,7 @@ $bg-color-dark: #546e7a;
 .fondo_img{
     display: inline;
 }
-.card-image{ 
+#card_img{ 
   background: url(https://bar-legacy.com/img/main_6.jpg) no-repeat ; 
   -webkit-background-size: cover;
   -moz-background-size: cover;
@@ -130,6 +136,21 @@ $bg-color-dark: #546e7a;
 }
 nav a.sidenav-trigger {
     display: block;
+}
+#heineken{
+    height: 250px;
+    
+    
+}
+#corona{
+    height: 250px;
+    
+    
+}
+#vinos{
+    height: 250px;
+    
+    
 }
     
 

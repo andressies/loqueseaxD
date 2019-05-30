@@ -2,7 +2,7 @@ import ReactDOM from "react-dom";
 import React, { Component } from "react";
 import PropTypes from "prop-types";
 
-export class Drinks extends React.Component {
+export class DrinksVinos extends React.Component {
 	constructor(props) {
 		super(props);
 		this.state = {
@@ -10,37 +10,32 @@ export class Drinks extends React.Component {
 
 			menu1: [
 				{
-					name: "heineken",
-					categoria: "cerveza",
+					name: "juguito de uva",
+					categoria: "vino",
 					precio: "123123",
-					imagen: "https://www.biernet.nl/images/merken/38870-heineken%20pilsener.jpg"
+					imagen:
+						"https://cdn.shopify.com/s/files/1/2196/9115/articles/shutterstock_562243966-1_2048x.jpg?v=1534175641"
 				},
 
 				{
-					name: "corona",
-					categoria: "cerveza",
+					name: "asdasd",
+					categoria: "vino",
 					precio: "123123",
-					imagen: "http://www.elefete.com/wp-content/uploads/2018/05/cerveza-corona.jpg"
+					imagen: "https://publiko.mx/wp-content/uploads/2019/02/vino.jpg"
 				},
 				{
 					name: "corona 2",
-					categoria: "cerveza",
+					categoria: "vino",
 					precio: "12",
 					imagen: "http://www.elefete.com/wp-content/uploads/2018/05/cerveza-corona.jpg"
 				}
 			]
 		};
 		this.agregar = this.agregar.bind(this);
-		this.mostrar = this.mostrar.bind(this);
 	}
 	agregar(item) {
-		const tmp = this.state.lista;
-		tmp.push(item);
-		this.setState({ lista: tmp });
+		this.state.lista.push(item);
 		console.log(item);
-	}
-	mostrar() {
-		console.log(this.state.lista);
 	}
 
 	render() {
@@ -77,13 +72,11 @@ export class Drinks extends React.Component {
 								<i className="fas fa-arrow-left" />
 							</a>
 							<a href="#!" className="brand-logo">
-								Cervezas
+								Vinos
 							</a>
 						</div>
 						<div className="nav-content">
-							<a
-								onClick={this.mostrar}
-								className="btn-floating btn-large halfway-fab waves-effect waves-light teal">
+							<a className="btn-floating btn-large halfway-fab waves-effect waves-light teal">
 								<i className="material-icons fas fa-shopping-cart" />
 							</a>
 						</div>

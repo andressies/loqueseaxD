@@ -12,7 +12,9 @@ import { BartenderView } from "./views/bartender_view.js";
 import { Single } from "./views/single.js";
 import { CategoriaView } from "./views/categoria_view.js";
 import { Drinks } from "./views/drinks.js";
+import { DrinksVinos } from "./views/drinks_vinos.js";
 import { RegisterView } from "./views/register_view.js";
+import { Carrito } from "./views/carrito.js";
 
 import injectContext from "./store/appContext.js";
 
@@ -58,6 +60,10 @@ export class Layout extends React.Component {
 							<Route path="/categorias/view" component={CategoriaView} />
 
 							<Route path="/drinks" component={Drinks} />
+
+							<Route path="/vinos" component={DrinksVinos} />
+
+							<Route path="/carrito" component={Carrito} />
 
 							<Route render={() => <h1>Not found!</h1>} />
 						</Switch>
