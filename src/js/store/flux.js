@@ -11,6 +11,14 @@ const getState = ({ getStore, setStore }) => {
 						"https://cdn.shopify.com/s/files/1/2196/9115/articles/shutterstock_562243966-1_2048x.jpg?v=1534175641",
 					icono: "fas fa-wine-glass-alt"
 				},
+				{
+					name: "juguito de uva",
+					categoria: "vino",
+					precio: "123123",
+					imagen:
+						"https://cdn.shopify.com/s/files/1/2196/9115/articles/shutterstock_562243966-1_2048x.jpg?v=1534175641",
+					icono: "fas fa-wine-glass-alt"
+				},
 
 				{
 					name: "asdasd",
@@ -78,6 +86,13 @@ const getState = ({ getStore, setStore }) => {
 			test: () => {
 				const store = getStore();
 				console.log(store.menuvinos);
+			},
+			agregar: item => {
+				const store = getStore();
+				const tmp = store.lista;
+				tmp.push(item);
+				setStore({ lista: tmp });
+				console.log(item);
 			}
 		}
 	};

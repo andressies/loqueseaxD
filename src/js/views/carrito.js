@@ -30,7 +30,7 @@ export class Carrito extends React.Component {
 	borrar(index) {
 		console.log(index);
 	}
-
+	// hace un recorrido a "la lista de pedidos"//
 	render() {
 		const listaMenu = this.state.menu1.map((item, index) => {
 			return (

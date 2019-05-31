@@ -28,6 +28,13 @@
 					"precio": "12",
 					"imagen": "http://www.elefete.com/wp-content/uploads/2018/05/cerveza-corona.jpg",
 					"icono": "fas fa-beer"
+				},	
+				{
+					"name": "corona 3",
+					"categoria": "cerveza",
+					"precio": "12",
+					"imagen": "http://www.elefete.com/wp-content/uploads/2018/05/cerveza-corona.jpg",
+					"icono": "fas fa-beer"
 				}
 			]
 			
