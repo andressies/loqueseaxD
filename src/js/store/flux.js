@@ -1,18 +1,7 @@
 const getState = ({ getStore, setStore }) => {
 	return {
 		store: {
-			demo: [
-				{
-					title: "FIRST",
-					background: "white",
-					initial: "white"
-				},
-				{
-					title: "SECOND",
-					background: "white",
-					initial: "white"
-				}
-			]
+			pedidos: []
 		},
 		actions: {
 			changeColor: (index, color) => {
@@ -28,6 +17,10 @@ const getState = ({ getStore, setStore }) => {
 
 				//reset the global store
 				setStore({ demo: demo });
+			},
+			test: () => {
+				const store = getStore();
+				console.log(store.menuvinos);
 			}
 		}
 	};

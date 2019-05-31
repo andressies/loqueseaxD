@@ -6,14 +6,18 @@ import ScrollToTop from "./component/scrollToTop";
 
 import { Home } from "./views/home.js";
 import { AdminView } from "./views/admin_view.js";
+import { ListadoPedidos } from "./component/listadoPedidos";
 
 import { BartenderView } from "./views/bartender_view.js";
+import { Ordenes } from "./component/ordenes.js";
+import { Context } from "./store/appContext";
 
 import { Single } from "./views/single.js";
 import { CategoriaView } from "./views/categoria_view.js";
 import { Drinks } from "./views/drinks.js";
 
 import injectContext from "./store/appContext.js";
+import { Pedidos } from "./component/bb.js";
 
 import { Navbar } from "./component/navbar.js";
 import { Footer } from "./component/footer.js";
@@ -53,6 +57,8 @@ export class Layout extends React.Component {
 							<Route path="/admin/view" component={AdminView} />
 
 							<Route path="/categorias/view" component={CategoriaView} />
+							<Route path="/ordenes/component" component={Ordenes} />
+							<Route path="/bb/component" component={Pedidos} />
 
 							<Route path="/drinks" component={Drinks} />
 
