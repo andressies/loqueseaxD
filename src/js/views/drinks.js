@@ -2,33 +2,16 @@ import ReactDOM from "react-dom";
 import React, { Component } from "react";
 import PropTypes from "prop-types";
 
+import { menu1 } from "./menu_1.json";
+import { lista } from "./carrito.json";
+
 export class Drinks extends React.Component {
 	constructor(props) {
 		super(props);
 		this.state = {
 			lista: [],
 
-			menu1: [
-				{
-					name: "heineken",
-					categoria: "cerveza",
-					precio: "123123",
-					imagen: "https://www.biernet.nl/images/merken/38870-heineken%20pilsener.jpg"
-				},
-
-				{
-					name: "corona",
-					categoria: "cerveza",
-					precio: "123123",
-					imagen: "http://www.elefete.com/wp-content/uploads/2018/05/cerveza-corona.jpg"
-				},
-				{
-					name: "corona 2",
-					categoria: "cerveza",
-					precio: "12",
-					imagen: "http://www.elefete.com/wp-content/uploads/2018/05/cerveza-corona.jpg"
-				}
-			]
+			menu1
 		};
 		this.agregar = this.agregar.bind(this);
 		this.mostrar = this.mostrar.bind(this);
@@ -82,6 +65,7 @@ export class Drinks extends React.Component {
 						</div>
 						<div className="nav-content">
 							<a
+								href="https://proyecto-bar--andressies.c9users.io/carrito"
 								onClick={this.mostrar}
 								className="btn-floating btn-large halfway-fab waves-effect waves-light teal">
 								<i className="material-icons fas fa-shopping-cart" />

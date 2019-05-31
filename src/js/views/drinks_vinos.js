@@ -2,44 +2,29 @@ import ReactDOM from "react-dom";
 import React, { Component } from "react";
 import PropTypes from "prop-types";
 
+import { menu1 } from "./menu_1.json";
+import { menu2 } from "./menu_2.json";
+import { Context } from "../store/appContext";
+
 export class DrinksVinos extends React.Component {
 	constructor(props) {
 		super(props);
 		this.state = {
 			lista: [],
 
-			menu1: [
-				{
-					name: "juguito de uva",
-					categoria: "vino",
-					precio: "123123",
-					imagen:
-						"https://cdn.shopify.com/s/files/1/2196/9115/articles/shutterstock_562243966-1_2048x.jpg?v=1534175641"
-				},
-
-				{
-					name: "asdasd",
-					categoria: "vino",
-					precio: "123123",
-					imagen: "https://publiko.mx/wp-content/uploads/2019/02/vino.jpg"
-				},
-				{
-					name: "corona 2",
-					categoria: "vino",
-					precio: "12",
-					imagen: "http://www.elefete.com/wp-content/uploads/2018/05/cerveza-corona.jpg"
-				}
-			]
+			menu2
 		};
 		this.agregar = this.agregar.bind(this);
 	}
 	agregar(item) {
-		this.state.lista.push(item);
+		const tmp = this.state.lista;
+		tmp.push(item);
+		this.setState({ lista: tmp });
 		console.log(item);
 	}
 
 	render() {
-		const listaMenu = this.state.menu1.map((item, index) => {
+		const listaMenu = this.state.menu2.map((item, index) => {
 			return (
 				<div className="row" key={index}>
 					<div className="col s12 m6">
@@ -83,6 +68,11 @@ export class DrinksVinos extends React.Component {
 					</nav>
 				</div>
 				{listaMenu}
+				<Context.Consumer>
+					{({ store, actions }) => {
+						return <button onClick={() => actions.test()}> </button>;
+					}}
+				</Context.Consumer>
 			</div>
 		);
 	}
