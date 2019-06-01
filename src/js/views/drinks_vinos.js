@@ -14,15 +14,9 @@ export class DrinksVinos extends React.Component {
 
 			menu2
 		};
-		this.agregar = this.agregar.bind(this);
 	}
 	//agrega y guarda en una nueva lista//
-	agregar(item) {
-		const tmp = this.state.lista;
-		tmp.push(item);
-		this.setState({ lista: tmp });
-		console.log(item);
-	}
+
 	//recorre la lista y rellena card con los datos que se solicitan en la lista//
 	render() {
 		return (
@@ -65,7 +59,9 @@ export class DrinksVinos extends React.Component {
 										</a>
 									</div>
 									<div className="nav-content">
-										<a className="btn-floating btn-large halfway-fab waves-effect waves-light teal">
+										<a
+											onClick={actions.mostrar}
+											className="btn-floating btn-large halfway-fab waves-effect waves-light teal">
 											<i className="material-icons fas fa-shopping-cart" />
 										</a>
 									</div>

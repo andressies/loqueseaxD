@@ -93,6 +93,14 @@ const getState = ({ getStore, setStore }) => {
 				tmp.push(item);
 				setStore({ lista: tmp });
 				console.log(item);
+			},
+			mostrar() {
+				const store = getStore();
+				console.log(store.lista);
+			},
+			borrar(index) {
+				const store = getStore();
+				console.log(index);
 			}
 		}
 	};
