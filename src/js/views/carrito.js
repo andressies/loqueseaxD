@@ -34,7 +34,7 @@ export class Carrito extends React.Component {
 											<li>Precio : ${item.precio}</li>
 											<li>
 												<a
-													onClick={() => actions.borrar(item)}
+													onClick={() => actions.prueba(index)}
 													id="carrito_eliminar"
 													className="waves-effect waves-light btn">
 													<i className="fas fa-trash-alt" />
@@ -65,7 +65,7 @@ export class Carrito extends React.Component {
 							<div className="row">
 								<ul className="collapsible popout">{listaMenu}</ul>
 
-								<a id="enviar" className="waves-effect waves-light btn col s6">
+								<a id="enviar" className="waves-effect waves-light btn col s6 m6 l6">
 									Enviar
 								</a>
 							</div>

@@ -2,6 +2,7 @@ const getState = ({ getStore, setStore }) => {
 	return {
 		store: {
 			lista: [],
+			prueba: [],
 			menuvinos: [
 				{
 					name: "juguito de uva",
@@ -59,6 +60,13 @@ const getState = ({ getStore, setStore }) => {
 					icono: "fas fa-beer"
 				},
 				{
+					name: "corona 2",
+					categoria: "cerveza",
+					precio: "12",
+					imagen: "http://www.elefete.com/wp-content/uploads/2018/05/cerveza-corona.jpg",
+					icono: "fas fa-beer"
+				},
+				{
 					name: "corona 3",
 					categoria: "cerveza",
 					precio: "12",
@@ -98,9 +106,17 @@ const getState = ({ getStore, setStore }) => {
 				const store = getStore();
 				console.log(store.lista);
 			},
-			borrar(index) {
+			prueba(index) {
 				const store = getStore();
 				console.log(index);
+			},
+			borrar(index) {
+				const store = getStore();
+				setStore({
+					menucervezas: store.menucervezas.filter((e, i) => {
+						return i !== index;
+					})
+				});
 			}
 		}
 	};
