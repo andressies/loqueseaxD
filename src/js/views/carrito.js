@@ -34,7 +34,7 @@ export class Carrito extends React.Component {
 											<li>Precio : ${item.precio}</li>
 											<li>
 												<a
-													onClick={() => actions.prueba(index)}
+													onClick={() => actions.borrar(index)}
 													id="carrito_eliminar"
 													className="waves-effect waves-light btn">
 													<i className="fas fa-trash-alt" />
