@@ -1,6 +1,6 @@
 @import "node_modules/materialize-css/sass/components/color-variables";
 @import "node_modules/materialize-css/sass/components/color-classes";
-
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,400,500,700');
 @import 'node_modules/materialize-css/sass/components/_variables.scss';
 
 $primary-color: rgba(255,255,255,1) !default;
@@ -12,6 +12,22 @@ $secondary-color: rgba(255,255,255,1) !default;
 $bg-color-lighten-4: #cfd8dc;
 $bg-color-lighten-2: #90a4ae;
 $bg-color-dark: #546e7a;
+
+* {
+    box-sizing: border-box;
+    font-family: "Roboto", sans-serif;
+  }
+  
+  body {
+    margin: 0;
+    padding: 0;
+  }
+  
+  .mr-20 {
+    margin-right: 20px !important;
+  }
+
+
 .asdasd{
     height: 420px;
     width: 900px;
