@@ -33,7 +33,7 @@ export class AdminViewBartenders extends React.Component {
 								</div>
 								<div className="card-reveal">
 									<span className="card-title grey-text text-darken-4">
-										UserName
+										{item.name} {item.lastName}
 										<i className="material-icons right fas fa-times" />
 									</span>
 									<ul>
@@ -135,7 +135,27 @@ export class AdminViewBartenders extends React.Component {
 									</li>
 								</ul>
 							</div>
-							<div className="row">{listaBartenders}</div>
+							<div className="row">
+								<div>{listaBartenders}</div>
+								<div id="card_cliente" className="card col s4 m4 l4 hoverable">
+									<div
+										id="card_cliente_img"
+										className="card-image waves-effect waves-block waves-light">
+										<a href="https://proyecto-bar--andressies.c9users.io/register/view">
+											<img
+												id="user_cliente_img"
+												className="activator"
+												src="https://img.icons8.com/cotton/2x/plus--v1.png"
+											/>
+										</a>
+									</div>
+									<div className="card-content">
+										<span className="card-title activator grey-text text-darken-4">
+											Agregar Bartender
+										</span>
+									</div>
+								</div>
+							</div>
 						</div>
 					);
 				}}

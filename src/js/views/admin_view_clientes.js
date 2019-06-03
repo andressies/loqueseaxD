@@ -33,7 +33,7 @@ export class AdminViewClientes extends React.Component {
 								</div>
 								<div className="card-reveal">
 									<span className="card-title grey-text text-darken-4">
-										UserName
+										{item.name} {item.lastName}
 										<i className="material-icons right fas fa-times" />
 									</span>
 									<ul>

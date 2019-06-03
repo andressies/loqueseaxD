@@ -3,6 +3,14 @@ const getState = ({ getStore, setStore }) => {
 		store: {
 			lista: [],
 			pedido: [],
+			registerBartender: [
+				{
+					z: "",
+					password: "",
+					name: "",
+					hasAgreed: false
+				}
+			],
 			bartenders: [
 				{
 					name: "bartender1",
@@ -166,6 +174,23 @@ const getState = ({ getStore, setStore }) => {
 			mostrar() {
 				const store = getStore();
 				console.log(store.lista);
+			},
+			handleChange(e) {
+				const store = getStore();
+				let target = e.target;
+				let value = target.type === "checkbox" ? target.checked : target.value;
+				let name = target.name;
+
+				setStore({
+					[name]: value
+				});
+			},
+			handleSubmit(e) {
+				const store = getStore();
+				e.preventDefault();
+
+				console.log("The form was submitted with the following data:");
+				console.log(store.registerBartender);
 			},
 			prueba(index) {
 				const store = getStore();
