@@ -2,7 +2,60 @@ const getState = ({ getStore, setStore }) => {
 	return {
 		store: {
 			lista: [],
-			prueba: [],
+			pedido: [],
+			bartenders: [
+				{
+					name: "bartender1",
+					lastName: "qwerty",
+					age: "24",
+					email: "asdas@gmail.com"
+				},
+				{
+					name: "bartender3",
+					lastName: "qwerty",
+					age: "24",
+					email: "asdas@gmail.com"
+				},
+				{
+					name: "bartender3",
+					lastName: "qwerty",
+					age: "24",
+					email: "asdas@gmail.com"
+				}
+			],
+			clientes: [
+				{
+					name: "asdasdsa1",
+					lastName: "qwerty",
+					age: "24",
+					email: "asdas@gmail.com"
+				},
+				{
+					name: "asdasdsa2",
+					lastName: "qwerty",
+					age: "24",
+					email: "asdas@gmail.com"
+				},
+				{
+					name: "asdasdsa3",
+					lastName: "qwerty",
+					age: "24",
+					email: "asdas@gmail.com"
+				},
+				{
+					name: "asdasdsa4",
+					lastName: "qwerty",
+					age: "24",
+					email: "asdas@gmail.com"
+				},
+				{
+					name: "asdasdsa5",
+					lastName: "qwerty",
+					age: "24",
+					email: "asdas@gmail.com"
+				}
+			],
+
 			menuvinos: [
 				{
 					name: "juguito de uva",
@@ -95,12 +148,20 @@ const getState = ({ getStore, setStore }) => {
 				const store = getStore();
 				console.log(store.menuvinos);
 			},
+			//agrega y guarda un elemnto a una lista//
 			agregar: item => {
 				const store = getStore();
 				const tmp = store.lista;
 				tmp.push(item);
 				setStore({ lista: tmp });
 				console.log(item);
+			},
+			enviar: item => {
+				const store = getStore();
+				const tmp = store.pedido;
+				tmp.push(store.menucervezas);
+				setStore({ pedido: tmp });
+				console.log(tmp);
 			},
 			mostrar() {
 				const store = getStore();
@@ -110,10 +171,28 @@ const getState = ({ getStore, setStore }) => {
 				const store = getStore();
 				console.log(index);
 			},
+
+			//borra un elemento d ela lista//
 			borrar(index) {
 				const store = getStore();
 				setStore({
 					menucervezas: store.menucervezas.filter((e, i) => {
+						return i !== index;
+					})
+				});
+			},
+			borrarBartender(index) {
+				const store = getStore();
+				setStore({
+					bartenders: store.bartenders.filter((e, i) => {
+						return i !== index;
+					})
+				});
+			},
+			borrarCliente(index) {
+				const store = getStore();
+				setStore({
+					clientes: store.clientes.filter((e, i) => {
 						return i !== index;
 					})
 				});

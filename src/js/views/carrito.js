@@ -64,8 +64,10 @@ export class Carrito extends React.Component {
 							</div>
 							<div className="row">
 								<ul className="collapsible popout">{listaMenu}</ul>
-
-								<a id="enviar" className="waves-effect waves-light btn col s6 m6 l6">
+								<a
+									onClick={() => actions.enviar()}
+									id="enviar"
+									className="waves-effect waves-light btn col s6 m6 l6">
 									Enviar
 								</a>
 							</div>
