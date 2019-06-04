@@ -17,6 +17,7 @@ import { Drinks } from "./views/drinks.js";
 import { DrinksVinos } from "./views/drinks_vinos.js";
 import { RegisterView } from "./views/register_view.js";
 import { Carrito } from "./views/carrito.js";
+import { DrinksOtros } from "./views/drinks_otro.js";
 
 import injectContext from "./store/appContext.js";
 
@@ -66,6 +67,8 @@ export class Layout extends React.Component {
 							<Route path="/categorias/view" component={CategoriaView} />
 
 							<Route path="/drinks" component={Drinks} />
+
+							<Route path="/drinksOtros" component={DrinksOtros} />
 
 							<Route path="/vinos" component={DrinksVinos} />
 

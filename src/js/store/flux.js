@@ -3,31 +3,36 @@ const getState = ({ getStore, setStore }) => {
 		store: {
 			lista: [],
 			pedido: [],
-			registerBartender: [
-				{
-					z: "",
-					password: "",
-					name: "",
-					hasAgreed: false
-				}
-			],
+			registerBartender: {
+				password: "",
+				name: "",
+				first_name: "",
+				last_name: "",
+				email: ""
+			},
 			bartenders: [
 				{
 					name: "bartender1",
+					first_name: "kfrkfir",
 					lastName: "qwerty",
 					age: "24",
+					password: "mnbmnb",
 					email: "asdas@gmail.com"
 				},
 				{
-					name: "bartender3",
+					name: "bartender1",
+					first_name: "kfrkfir",
 					lastName: "qwerty",
 					age: "24",
+					password: "mnbmnb",
 					email: "asdas@gmail.com"
 				},
 				{
-					name: "bartender3",
+					name: "bartender1",
+					first_name: "kfrkfir",
 					lastName: "qwerty",
 					age: "24",
+					password: "mnbmnb",
 					email: "asdas@gmail.com"
 				}
 			],
@@ -65,6 +70,39 @@ const getState = ({ getStore, setStore }) => {
 			],
 
 			menuvinos: [
+				{
+					name: "juguito de uva",
+					categoria: "vino",
+					precio: "123123",
+					imagen:
+						"https://cdn.shopify.com/s/files/1/2196/9115/articles/shutterstock_562243966-1_2048x.jpg?v=1534175641",
+					icono: "fas fa-wine-glass-alt"
+				},
+				{
+					name: "juguito de uva",
+					categoria: "vino",
+					precio: "123123",
+					imagen:
+						"https://cdn.shopify.com/s/files/1/2196/9115/articles/shutterstock_562243966-1_2048x.jpg?v=1534175641",
+					icono: "fas fa-wine-glass-alt"
+				},
+
+				{
+					name: "asdasd",
+					categoria: "vino",
+					precio: "123123",
+					imagen: "https://publiko.mx/wp-content/uploads/2019/02/vino.jpg",
+					icono: "fas fa-wine-glass-alt"
+				},
+				{
+					name: "corona 2",
+					categoria: "vino",
+					precio: "12",
+					imagen: "http://www.elefete.com/wp-content/uploads/2018/05/cerveza-corona.jpg",
+					icono: "fas fa-wine-glass-alt"
+				}
+			],
+			menuotros: [
 				{
 					name: "juguito de uva",
 					categoria: "vino",
@@ -171,11 +209,27 @@ const getState = ({ getStore, setStore }) => {
 				setStore({ pedido: tmp });
 				console.log(tmp);
 			},
+			enviarBartender: item => {
+				const store = getStore();
+				const tmp = store.bartenders;
+				tmp.push(store.registerBartender);
+				setStore({
+					bartenders: tmp,
+					registerBartender: {
+						password: "",
+						name: "",
+						first_name: "",
+						last_name: "",
+						email: ""
+					}
+				});
+				console.log(tmp);
+			},
 			mostrar() {
 				const store = getStore();
-				console.log(store.lista);
+				console.log(store.registerBartender);
 			},
-			handleChange(e) {
+			/*handleChange(e) {
 				const store = getStore();
 				let target = e.target;
 				let value = target.type === "checkbox" ? target.checked : target.value;
@@ -184,7 +238,7 @@ const getState = ({ getStore, setStore }) => {
 				setStore({
 					[name]: value
 				});
-			},
+			},*/
 			handleSubmit(e) {
 				const store = getStore();
 				e.preventDefault();
@@ -192,6 +246,25 @@ const getState = ({ getStore, setStore }) => {
 				console.log("The form was submitted with the following data:");
 				console.log(store.registerBartender);
 			},
+			handleinput(e) {
+				const store = getStore();
+
+				const { value, name } = e.target;
+				setStore({
+					[name]: value
+				});
+				console.log(store.registerBartender);
+			},
+			handleprueba(e) {
+				const store = getStore();
+				const { value, name } = e.target;
+				let newVal = store.registerBartender;
+				newVal[name] = value;
+				setStore({
+					registerBartender: newVal
+				});
+			},
+
 			prueba(index) {
 				const store = getStore();
 				console.log(index);
