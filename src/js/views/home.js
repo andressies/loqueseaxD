@@ -14,7 +14,7 @@ export class Home extends React.Component {
 									<div className="col s12">
 										<img
 											className="user_login_img"
-											src="https://cdn.iconscout.com/icon/free/png-256/account-profile-avatar-man-circle-round-user-30452.png"
+											src="https://image.flaticon.com/icons/png/512/993/993222.png"
 											height="100"
 											width="100"
 										/>
@@ -35,33 +35,57 @@ export class Home extends React.Component {
 													Password
 												</label>
 											</div>
-											<div className="input-field left-align col s12 ">
-												<p className="col s6 ">
-													<label>
-														<input
-															type="checkbox"
-															className="filled-in "
-															defaultChecked="checked"
-														/>
-														<span>Remember me</span>
-													</label>
-												</p>
-												<p className="check_admin_user right-align col s6">
-													<label>
-														<input
-															type="checkbox"
-															className="filled-in "
-															defaultChecked="checked"
-														/>
-														<span>Admin User</span>
-													</label>
-												</p>
+											<div className="input-field left-align col s12 m12 l12">
+												<div className=" left-align col s6 m6 l6">
+													<p className="">
+														<label>
+															<input
+																type="checkbox"
+																className="filled-in  "
+																defaultChecked="checked"
+															/>
+															<span>Remember me</span>
+														</label>
+													</p>
+												</div>
+												<div className=" right-align col s6 m6 l6">
+													<div>
+														<p className="check_admin_user  ">
+															<label>
+																<input
+																	id="adminUser"
+																	type="checkbox"
+																	className="filled-in left-align "
+																	defaultChecked="checked"
+																/>
+																<span>Admin User</span>
+															</label>
+														</p>
+													</div>
+													<div>
+														<p className="check_bartender_user  ">
+															<label>
+																<input
+																	type="checkbox"
+																	className="filled-in left-align "
+																	defaultChecked="checked"
+																/>
+																<span>Bartender </span>
+															</label>
+														</p>
+													</div>
+												</div>
 											</div>
+
 											<a className="btn-floating btn-large pulse waves-effect waves-green">
 												<i className="material-icons fas fa-sign-in-alt" />
 											</a>
 										</form>
-										<a className="right">registrarse</a>
+										<a
+											href="https://proyecto-bar--andressies.c9users.io/register/view"
+											className="right">
+											registrarse
+										</a>
 									</div>
 								</div>
 							</div>

@@ -4,11 +4,48 @@ import PropTypes from "prop-types";
 import { Navbar } from "../component/navbar.js";
 import { Context } from "../store/appContext";
 
-export class AdminView extends React.Component {
+export class AdminViewClientes extends React.Component {
 	render() {
 		return (
 			<Context.Consumer>
 				{({ store, actions }) => {
+					const listaClientes = store.clientes.map((item, index) => {
+						return (
+							<div key={index} id="card_cliente" className="card col s4 m4 l4 hoverable">
+								<div id="card_cliente_img" className="card-image waves-effect waves-block waves-light">
+									<img
+										id="user_cliente_img"
+										className="activator"
+										src="http://sanjuanbautista.edu.co/academico/cPanel/documentos/images/user.png"
+									/>
+								</div>
+								<div className="card-content">
+									<span className="card-title activator grey-text text-darken-4">
+										{item.name} {item.lastName}
+										<i className="material-icons left fas fa-ellipsis-v" />
+									</span>
+									<p>
+										<i
+											onClick={() => actions.borrarCliente(index)}
+											className="material-icons right fas fa-trash-alt"
+										/>
+									</p>
+								</div>
+								<div className="card-reveal">
+									<span className="card-title grey-text text-darken-4">
+										{item.name} {item.lastName}
+										<i className="material-icons right fas fa-times" />
+									</span>
+									<ul>
+										<li className="collection-item">FirstName: {item.name}</li>
+										<li className="collection-item">LastName: {item.lastName}</li>
+										<li className="collection-item">age: {item.age}</li>
+										<li className="collection-item">email: {item.email}</li>
+									</ul>
+								</div>
+							</div>
+						);
+					});
 					return (
 						<div id="general_admin_view">
 							<Navbar />
@@ -98,6 +135,7 @@ export class AdminView extends React.Component {
 									</li>
 								</ul>
 							</div>
+							<div className="row">{listaClientes}</div>
 						</div>
 					);
 				}}

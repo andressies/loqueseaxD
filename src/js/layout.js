@@ -15,6 +15,12 @@ import { Context } from "./store/appContext";
 import { Single } from "./views/single.js";
 import { CategoriaView } from "./views/categoria_view.js";
 import { Drinks } from "./views/drinks.js";
+import { DrinksVinos } from "./views/drinks_vinos.js";
+import { RegisterView } from "./views/register_view.js";
+import { Carrito } from "./views/carrito.js";
+import { DrinksOtros } from "./views/drinks_otro.js";
+import { AdminViewClientes } from "./views/admin_view_clientes.js";
+import { AdminViewBartenders } from "./views/admin_view_bartender.js";
 
 import injectContext from "./store/appContext.js";
 import { Pedidos } from "./component/bb.js";
@@ -50,17 +56,29 @@ export class Layout extends React.Component {
 
 							<Route path="/bartender/view" component={BartenderView} />
 
+							<Route path="/register/view" component={RegisterView} />
+
 							<Route exact path="/" component={Home} />
 
 							<Route path="/single/:theid" component={Single} />
 
 							<Route path="/admin/view" component={AdminView} />
 
+							<Route path="/clientes" component={AdminViewClientes} />
+
+							<Route path="/user_bartender" component={AdminViewBartenders} />
+
 							<Route path="/categorias/view" component={CategoriaView} />
 							<Route path="/ordenes/component" component={Ordenes} />
 							<Route path="/bb/component" component={Pedidos} />
 
 							<Route path="/drinks" component={Drinks} />
+
+							<Route path="/drinksOtros" component={DrinksOtros} />
+
+							<Route path="/vinos" component={DrinksVinos} />
+
+							<Route path="/carrito" component={Carrito} />
 
 							<Route render={() => <h1>Not found!</h1>} />
 						</Switch>

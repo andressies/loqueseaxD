@@ -19,14 +19,11 @@ export class Navbar extends React.Component {
 				</ul>
 				<nav className="navbar_admin_view #546e7a blue-grey darken-1">
 					<div className="nav-wrapper">
-						<a href="#!" className="brand-logo ">
+						<a href="#" data-target="slide-out" className="sidenav-trigger ">
 							<img
-								className=""
-								src="https://cdn.iconscout.com/icon/free/png-256/account-profile-avatar-man-circle-round-user-30452.png"
-								height="60"
-								width="60"
+								className="button_menu hoverable  valign-wrapper"
+								src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b2/Hamburger_icon.svg/1200px-Hamburger_icon.svg.png"
 							/>
-							User
 						</a>
 						<ul className="right hoverable ">
 							<li>

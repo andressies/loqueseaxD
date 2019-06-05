@@ -60,9 +60,16 @@ $bg-color-dark: #546e7a;
     height: 100px;
         width: 100px;
         border: solid;
-        border-radius: 15px;
+        border-color: #9999A1;
+        
         color: white;
-        background-color: #cfd8dc;
+        background-color: #66666E;
+}
+
+#tooltipped{
+    background-color: black;
+    
+    width: 100px;
 }
 
 #cerveza_icono{
@@ -83,6 +90,103 @@ $bg-color-dark: #546e7a;
 .carousel{
     height: 100px;
 }
+#genreal{
+   
+}
+.fondo_img{
+    display: inline;
+}
+#card_img{ 
+  background: url(https://bar-legacy.com/img/main_6.jpg) no-repeat ; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+    background-position: center;
+   
+}
+.card .card-image {
+    
+    height: 250px;
+}
+.text_menu{
+    color: grey;
+}
+#promociones{
+    color: white;
+    p{
+        display: inline-block;
+    }
+}
+#best_bar{
+    color: white;
+    
+    display: inline-block;
+}
+#general_admin_view{
+   
+}
+.button_menu{
+    height: 60px;
+    width: 60px;
+}
+#img_menu {
+    
+    height: 200px;
+}
+nav a.sidenav-trigger {
+    display: block;
+}
+#heineken{
+    height: 250px;
+    
+    
+}
+#corona{
+    height: 250px;
+    
+    
+}
+#vinos{
+    height: 250px;
+    
+    
+}
+#enviar{
+    margin: 10px 90px 0px 90px;
+}
+#carrito_eliminar{
+    color: black;
+    margin: auto;
+}
+#card_cliente{
+    height: 350px;
+    width: 300px;
+    margin: 20px 20px 20px 20px;
+    border-radius: 15px;
+    background-color: #e0f2f1;
+}
+#card_cliente_img{
+    height: 200px;
+    width: 200px;
+    margin: auto;
+}
+#user_cliente_img{
+    height: 200px;
+    width: 150px;
+    margin: auto;
+}
+    
+
+    
+
+/*.card-image{
+    display: inline-block;
+}
+
+/*#promociones{
+    float: left;
+}
     
 
     
@@ -98,6 +202,8 @@ $bg-color-dark: #546e7a;
 /* 
     General Styles
 */
+
+
 
 
 
