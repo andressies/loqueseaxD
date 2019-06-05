@@ -4,11 +4,33 @@ import PropTypes from "prop-types";
 import { Navbar } from "../component/navbar.js";
 import { Context } from "../store/appContext";
 
-export class AdminView extends React.Component {
+export class CartaVinos extends React.Component {
 	render() {
 		return (
 			<Context.Consumer>
 				{({ store, actions }) => {
+					const CartaVinos = store.menuvinos.map((item, index) => {
+						return (
+							<div className="col s12 m3" key={index}>
+								<div className="">
+									<div className="card hoverable">
+										<div className="card-image">
+											<img id="heineken" src={item.imagen} />
+											<span className="card-title">{item.name}</span>
+											<a
+												onClick={() => actions.borrarCartaVinos(index)}
+												className="btn-floating halfway-fab waves-effect waves-light red">
+												<i className="material-icons fas fa-trash-alt" />
+											</a>
+										</div>
+										<div className="card-content">
+											<h4> Precio : {item.precio}</h4>
+										</div>
+									</div>
+								</div>
+							</div>
+						);
+					});
 					return (
 						<div id="general_admin_view">
 							<Navbar />
@@ -110,6 +132,27 @@ export class AdminView extends React.Component {
 										</a>
 									</li>
 								</ul>
+							</div>
+							<div className="row">
+								<div>{CartaVinos}</div>
+								<div id="card_cliente" className="card col s4 m4 l4 hoverable">
+									<div
+										id="card_cliente_img"
+										className="card-image waves-effect waves-block waves-light">
+										<a href="https://proyecto-bar--andressies.c9users.io/register/view">
+											<img
+												id="user_cliente_img"
+												className="activator"
+												src="https://img.icons8.com/cotton/2x/plus--v1.png"
+											/>
+										</a>
+									</div>
+									<div className="card-content">
+										<span className="card-title activator grey-text text-darken-4">
+											Agregar Bartender
+										</span>
+									</div>
+								</div>
 							</div>
 						</div>
 					);

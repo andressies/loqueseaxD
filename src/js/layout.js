@@ -6,8 +6,6 @@ import ScrollToTop from "./component/scrollToTop";
 
 import { Home } from "./views/home.js";
 import { AdminView } from "./views/admin_view.js";
-import { AdminViewClientes } from "./views/admin_view_clientes.js";
-import { AdminViewBartenders } from "./views/admin_view_bartender.js";
 
 import { BartenderView } from "./views/bartender_view.js";
 
@@ -18,6 +16,10 @@ import { DrinksVinos } from "./views/drinks_vinos.js";
 import { RegisterView } from "./views/register_view.js";
 import { Carrito } from "./views/carrito.js";
 import { DrinksOtros } from "./views/drinks_otro.js";
+import { CartaCervezas } from "./views/admin_carta.js";
+import { CartaVinos } from "./views/admin_carta_vinos.js";
+import { AdminViewClientes } from "./views/admin_view_clientes.js";
+import { AdminViewBartenders } from "./views/admin_view_bartender.js";
 
 import injectContext from "./store/appContext.js";
 
@@ -67,6 +69,10 @@ export class Layout extends React.Component {
 							<Route path="/categorias/view" component={CategoriaView} />
 
 							<Route path="/drinks" component={Drinks} />
+
+							<Route path="/carta" component={CartaCervezas} />
+
+							<Route path="/cartaVinos" component={CartaVinos} />
 
 							<Route path="/drinksOtros" component={DrinksOtros} />
 

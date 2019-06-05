@@ -10,6 +10,13 @@ const getState = ({ getStore, setStore }) => {
 				last_name: "",
 				email: ""
 			},
+			agregarCerveza: {
+				name: "",
+				categoria: "cerveza",
+				precio: "",
+				imagen: "",
+				icono: "fas fa-wine-glass-alt"
+			},
 			bartenders: [
 				{
 					name: "bartender1",
@@ -225,6 +232,22 @@ const getState = ({ getStore, setStore }) => {
 				});
 				console.log(tmp);
 			},
+			agregarCervezaCarta: item => {
+				const store = getStore();
+				const tmp = store.menucervezas;
+				tmp.push(store.agregarCerveza);
+				setStore({
+					menucervezas: tmp,
+					agregarCerveza: {
+						name: "",
+						categoria: "cerveza",
+						precio: "",
+						imagen: "",
+						icono: "fas fa-wine-glass-alt"
+					}
+				});
+				console.log(tmp);
+			},
 			mostrar() {
 				const store = getStore();
 				console.log(store.registerBartender);
@@ -264,6 +287,15 @@ const getState = ({ getStore, setStore }) => {
 					registerBartender: newVal
 				});
 			},
+			agregarTrago(e) {
+				const store = getStore();
+				const { value, name } = e.target;
+				let newVal = store.agregarCerveza;
+				newVal[name] = value;
+				setStore({
+					agregarCerveza: newVal
+				});
+			},
 
 			prueba(index) {
 				const store = getStore();
@@ -279,6 +311,14 @@ const getState = ({ getStore, setStore }) => {
 					})
 				});
 			},
+			borrarCartaVinos(index) {
+				const store = getStore();
+				setStore({
+					menuvinos: store.menuvinos.filter((e, i) => {
+						return i !== index;
+					})
+				});
+			},
 			borrarBartender(index) {
 				const store = getStore();
 				setStore({
@@ -287,6 +327,7 @@ const getState = ({ getStore, setStore }) => {
 					})
 				});
 			},
+
 			borrarCliente(index) {
 				const store = getStore();
 				setStore({
