@@ -7,37 +7,40 @@ import PropTypes from "prop-types";
 export class Pedidos extends React.Component {
 	render() {
 		return (
-			<div className="collection">
-				<ul className="collapsible popout">
-					<li>
-						<div className="collapsible-header">
-							<i className="material-icons" />
-							MESA 1
-						</div>
-						<div className="collapsible-body">
-							<span>5 CERVEZAS , 3 RON</span>
-						</div>
-					</li>
-					<li>
-						<div className="collapsible-header">
-							<i className="material-icons" />
-							MESA 2
-						</div>
-						<div className="collapsible-body">
-							<span>5 CERVEZAS + 5 RON </span>
-						</div>
-					</li>
-					<li>
-						<div className="collapsible-header">
-							<i className="material-icons" />
-							MESA 3
-						</div>
-						<div className="collapsible-body">
-							<span>4 PISCOLAS</span>
-						</div>
-					</li>
-				</ul>
-			</div>
+			<Context.Consumer>
+				{({ store, actions }) => {
+					const listaMenu = store.menucervezas.map((item, index) => {
+						return (
+							<li key={index}>
+								<div className="collapsible-header">
+									<i className={item.icono} />
+
+									{item.name}
+								</div>
+
+								<div className="collapsible-body ">
+									<span>
+										<ul>
+											<li>Categoria : {item.categoria}</li>
+
+											<li>Precio : ${item.precio}</li>
+
+											<li>
+												<a
+													onClick={() => actions.borrar(index)}
+													id="carrito_eliminar"
+													className="waves-effect waves-light btn">
+													<i className="fas fa-trash-alt" />
+												</a>
+											</li>
+										</ul>
+									</span>
+								</div>
+							</li>
+						);
+					});
+				}}
+			</Context.Consumer>
 		);
 	}
 }

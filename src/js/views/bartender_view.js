@@ -5,6 +5,7 @@ import { ListadoPedidos } from "../component/listadoPedidos";
 import { NumberList } from "../component/ordenes";
 import { Context } from "../store/appContext";
 import { Pedidos } from "../component/bb";
+import { Pedidos2 } from "../component/pedidosnew";
 
 export class BartenderView extends React.Component {
 	constructor(props) {
@@ -17,13 +18,13 @@ export class BartenderView extends React.Component {
 					<Navbar2 />
 				</div>
 				<div id="fondopedidos" className="row">
-					<div className="col s12 m8">
+					<div className="col s12 m6">
 						<ListadoPedidos />
 					</div>
 
 					<div className="row">
-						<div className="col s12 m2">
-							<Pedidos />
+						<div className="col s12 m4 l4">
+							<Pedidos2 />
 						</div>
 					</div>
 				</div>
