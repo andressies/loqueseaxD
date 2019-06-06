@@ -66,7 +66,7 @@ export class Carrito extends React.Component {
 									onClick={() => actions.enviar()}
 									id="enviar"
 									className="waves-effect waves-light btn col s6 m6 l6">
-									Enviar
+									Pagar
 								</a>
 							</div>
 						</div>

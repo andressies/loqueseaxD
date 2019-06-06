@@ -56,14 +56,6 @@ export class AdminView extends React.Component {
 										</a>
 									</li>
 
-									<li>
-										<a href="#!">
-											{" "}
-											<i className="fas fa-book-open" />
-											Carta
-										</a>
-									</li>
-
 									<ul className="collapsible">
 										<li>
 											<div className="collapsible-header">

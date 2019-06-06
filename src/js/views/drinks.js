@@ -49,7 +49,7 @@ export class Drinks extends React.Component {
 											<i className="fas fa-arrow-left" />
 										</a>
 										<a href="#!" className="brand-logo">
-											Vinos Cervezas
+											Cervezas
 										</a>
 									</div>
 									<div className="nav-content">
