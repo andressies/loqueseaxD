@@ -1,20 +1,23 @@
+import ReactDOM from "react-dom";
+
 import React, { Component } from "react";
+
 import PropTypes from "prop-types";
 
 import { Context } from "../store/appContext";
 
-export class ListadoPedidos extends React.Component {
+export class Pedidos2 extends React.Component {
 	// hace un recorrido a "la lista de pedidos"//
 
 	render() {
 		return (
 			<div>
-				<h3 id="fondo7">LISTA DE PEDIDOS</h3>
+				<h3 id="fondo6">PEDIDOS TOMADOS</h3>
 				<Context.Consumer>
 					{({ store, actions }) => {
-						const listaMenu = store.pedidos.map((item, index) => {
+						const listaMenu = store.tomados.map((item, index) => {
 							return (
-								<li id="fondo7" key={index}>
+								<li id="fondo9" key={index}>
 									<div className="collapsible-header">
 										<i className={item.icono} />
 
@@ -30,16 +33,10 @@ export class ListadoPedidos extends React.Component {
 
 												<li>
 													<a
-														onClick={() => actions.borrarOrden(index)}
+														onClick={() => actions.borrarOrden(indexgit)}
 														id="carrito_eliminar"
 														className="waves-effect waves-light btn">
 														<i className="fas fa-trash-alt" />
-													</a>
-													<a
-														onClick={() => actions.tomarPedido(item)}
-														id="carrito_eliminar"
-														className="waves-effect waves-light btn">
-														<i className="fas fa-share" />
 													</a>
 												</li>
 											</ul>

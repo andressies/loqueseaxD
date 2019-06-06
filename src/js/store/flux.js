@@ -1,6 +1,91 @@
 const getState = ({ getStore, setStore }) => {
 	return {
 		store: {
+
+			pedidos: [
+				{
+					id: 1,
+					name: "heineken",
+					categoria: "cerveza",
+					precio: "123123",
+					imagen: "https://www.biernet.nl/images/merken/38870-heineken%20pilsener.jpg",
+					icono: "fas fa-beer"
+				},
+
+				{
+					id: 2,
+					name: "corona 3",
+					categoria: "cerveza",
+					precio: "123123",
+					imagen: "http://www.elefete.com/wp-content/uploads/2018/05/cerveza-corona.jpg",
+					icono: "fas fa-beer"
+				},
+				{
+					id: 3,
+					name: "corona 5",
+					categoria: "cerveza",
+					precio: "123123",
+					imagen: "http://www.elefete.com/wp-content/uploads/2018/05/cerveza-corona.jpg",
+					icono: "fas fa-beer"
+				},
+				{
+					id: 4,
+					name: "corona 6",
+					categoria: "cerveza",
+					precio: "123123",
+					imagen: "http://www.elefete.com/wp-content/uploads/2018/05/cerveza-corona.jpg",
+					icono: "fas fa-beer"
+				},
+				{
+					id: 6,
+					name: "heineken 5",
+					categoria: "cerveza",
+					precio: "123123",
+					imagen: "http://www.elefete.com/wp-content/uploads/2018/05/cerveza-corona.jpg",
+					icono: "fas fa-beer"
+				},
+				{
+					id: 7,
+					name: "corona 6",
+					categoria: "cerveza",
+					precio: "123123",
+					imagen: "http://www.elefete.com/wp-content/uploads/2018/05/cerveza-corona.jpg",
+					icono: "fas fa-beer"
+				},
+				{
+					id: 8,
+					name: "heineken",
+					categoria: "cerveza",
+					precio: "123123",
+					imagen: "http://www.elefete.com/wp-content/uploads/2018/05/cerveza-corona.jpg",
+					icono: "fas fa-beer"
+				}
+			],
+			tomados: [],
+			menucervezas: [
+				{
+					name: "heineken",
+
+					categoria: "cerveza",
+
+					precio: "123123",
+
+					imagen: "https://www.biernet.nl/images/merken/38870-heineken%20pilsener.jpg"
+				}
+			],
+
+			lista: [],
+			pedido: [],
+			registerBartender: {
+				password: "",
+				name: "",
+				first_name: "",
+				last_name: "",
+				email: ""
+			},
+			bartenders: [
+				{
+=======
 			lista: [],
 			pedido: [],
 			registerBartender: {
@@ -26,12 +111,14 @@ const getState = ({ getStore, setStore }) => {
 			},
 			bartenders: [
 				{
+>>>>>>> a848fc30abc3348db4e85ba62fe37099d3c9f34e
 					name: "bartender1",
 					first_name: "kfrkfir",
 					lastName: "qwerty",
 					age: "24",
 					password: "mnbmnb",
 					email: "asdas@gmail.com"
+
 				},
 				{
 					name: "bartender1",
@@ -70,6 +157,46 @@ const getState = ({ getStore, setStore }) => {
 					email: "asdas@gmail.com"
 				},
 				{
+=======
+				},
+				{
+					name: "bartender1",
+					first_name: "kfrkfir",
+					lastName: "qwerty",
+					age: "24",
+					password: "mnbmnb",
+					email: "asdas@gmail.com"
+				},
+				{
+					name: "bartender1",
+					first_name: "kfrkfir",
+					lastName: "qwerty",
+					age: "24",
+					password: "mnbmnb",
+					email: "asdas@gmail.com"
+				}
+			],
+			clientes: [
+				{
+					name: "asdasdsa1",
+					lastName: "qwerty",
+					age: "24",
+					email: "asdas@gmail.com"
+				},
+				{
+					name: "asdasdsa2",
+					lastName: "qwerty",
+					age: "24",
+					email: "asdas@gmail.com"
+				},
+				{
+					name: "asdasdsa3",
+					lastName: "qwerty",
+					age: "24",
+					email: "asdas@gmail.com"
+				},
+				{
+
 					name: "asdasdsa4",
 					lastName: "qwerty",
 					age: "24",
@@ -155,11 +282,56 @@ const getState = ({ getStore, setStore }) => {
 					categoria: "cerveza",
 					precio: "123123",
 					imagen: "https://www.biernet.nl/images/merken/38870-heineken%20pilsener.jpg",
+
 					icono: "fas fa-beer"
 				},
 
 				{
 					name: "corona",
+
+
+					categoria: "cerveza",
+
+					precio: "123123",
+
+					imagen: "http://www.elefete.com/wp-content/uploads/2018/05/cerveza-corona.jpg",
+
+					icono: "fas fa-beer"
+				},
+
+				{
+					name: "corona 2",
+
+					categoria: "cerveza",
+
+					precio: "12",
+
+					imagen: "http://www.elefete.com/wp-content/uploads/2018/05/cerveza-corona.jpg",
+
+					icono: "fas fa-beer"
+				},
+
+				{
+					name: "corona 2",
+
+					categoria: "cerveza",
+
+					precio: "12",
+
+					imagen: "http://www.elefete.com/wp-content/uploads/2018/05/cerveza-corona.jpg",
+
+					icono: "fas fa-beer"
+				},
+
+				{
+					name: "corona 3",
+
+					categoria: "cerveza",
+
+					precio: "12",
+
+					imagen: "http://www.elefete.com/wp-content/uploads/2018/05/cerveza-corona.jpg",
+
 					categoria: "cerveza",
 					precio: "123123",
 					imagen: "http://www.elefete.com/wp-content/uploads/2018/05/cerveza-corona.jpg",
@@ -184,6 +356,33 @@ const getState = ({ getStore, setStore }) => {
 					categoria: "cerveza",
 					precio: "12",
 					imagen: "http://www.elefete.com/wp-content/uploads/2018/05/cerveza-corona.jpg",
+
+
+					categoria: "cerveza",
+					precio: "123123",
+					imagen: "http://www.elefete.com/wp-content/uploads/2018/05/cerveza-corona.jpg",
+					icono: "fas fa-beer"
+				},
+				{
+					name: "corona 2",
+					categoria: "cerveza",
+					precio: "12",
+					imagen: "http://www.elefete.com/wp-content/uploads/2018/05/cerveza-corona.jpg",
+					icono: "fas fa-beer"
+				},
+				{
+					name: "corona 2",
+					categoria: "cerveza",
+					precio: "12",
+					imagen: "http://www.elefete.com/wp-content/uploads/2018/05/cerveza-corona.jpg",
+					icono: "fas fa-beer"
+				},
+				{
+					name: "corona 3",
+					categoria: "cerveza",
+					precio: "12",
+					imagen: "http://www.elefete.com/wp-content/uploads/2018/05/cerveza-corona.jpg",
+
 					icono: "fas fa-beer"
 				}
 			]
@@ -208,6 +407,26 @@ const getState = ({ getStore, setStore }) => {
 				const store = getStore();
 				console.log(store.menuvinos);
 			},
+
+
+			tomarPedido: item => {
+				const store = getStore();
+				const newPedido = store.pedidos.filter(el => el.id !== item.id);
+				const newTomado = store.tomados;
+				newTomado.push(item);
+				setStore({ pedidos: newPedido, tomados: newTomado });
+			},
+			borrarOrden(index) {
+				const store = getStore();
+				const x = store.tomados.filter((e, i) => {
+					return i !== index;
+				});
+
+				setStore({
+					tomados: x
+				});
+			},
+
 			//agrega y guarda un elemnto a una lista//
 			agregar: item => {
 				const store = getStore();
@@ -239,6 +458,8 @@ const getState = ({ getStore, setStore }) => {
 				});
 				console.log(tmp);
 			},
+<<<<<<< HEAD
+=======
 			agregarCervezaCarta: item => {
 				const store = getStore();
 				const tmp = store.menucervezas;
@@ -271,6 +492,7 @@ const getState = ({ getStore, setStore }) => {
 				});
 				console.log(tmp);
 			},
+
 			mostrar() {
 				const store = getStore();
 				console.log(store.registerBartender);
@@ -310,6 +532,7 @@ const getState = ({ getStore, setStore }) => {
 					registerBartender: newVal
 				});
 			},
+
 			agregarTrago(e) {
 				const store = getStore();
 				const { value, name } = e.target;
@@ -329,6 +552,7 @@ const getState = ({ getStore, setStore }) => {
 				});
 			},
 
+
 			prueba(index) {
 				const store = getStore();
 				console.log(index);
@@ -343,6 +567,7 @@ const getState = ({ getStore, setStore }) => {
 					})
 				});
 			},
+
 			borrarCartaVinos(index) {
 				const store = getStore();
 				setStore({
@@ -351,6 +576,7 @@ const getState = ({ getStore, setStore }) => {
 					})
 				});
 			},
+
 			borrarBartender(index) {
 				const store = getStore();
 				setStore({

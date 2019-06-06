@@ -87,9 +87,18 @@ export class AdminViewBartenders extends React.Component {
 										</a>
 									</li>
 									<li>
+										<a href="#!">
 										<a href="https://proyecto-bar--andressies.c9users.io/user_bartender">
 											<i className="fas fa-user-tie" />
 											Bartender
+										</a>
+																				</a>
+									</li>
+									<li>
+										<a href="#!">
+											{" "}
+											<i className="fas fa-book-open" />
+											Carta
 										</a>
 									</li>
 									<ul className="collapsible">
