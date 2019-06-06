@@ -17,6 +17,13 @@ const getState = ({ getStore, setStore }) => {
 				imagen: "",
 				icono: "fas fa-wine-glass-alt"
 			},
+			agregarVino: {
+				name: "",
+				categoria: "vino",
+				precio: "",
+				imagen: "",
+				icono: "fas fa-wine-glass-alt"
+			},
 			bartenders: [
 				{
 					name: "bartender1",
@@ -243,6 +250,22 @@ const getState = ({ getStore, setStore }) => {
 						categoria: "cerveza",
 						precio: "",
 						imagen: "",
+						icono: "fas fa-beer"
+					}
+				});
+				console.log(tmp);
+			},
+			agregarVinoCarta: item => {
+				const store = getStore();
+				const tmp = store.menuvinos;
+				tmp.push(store.agregarVino);
+				setStore({
+					menuvinos: tmp,
+					agregarVino: {
+						name: "",
+						categoria: "vino",
+						precio: "",
+						imagen: "",
 						icono: "fas fa-wine-glass-alt"
 					}
 				});
@@ -294,6 +317,15 @@ const getState = ({ getStore, setStore }) => {
 				newVal[name] = value;
 				setStore({
 					agregarCerveza: newVal
+				});
+			},
+			agregarVino(e) {
+				const store = getStore();
+				const { value, name } = e.target;
+				let newVal = store.agregarVino;
+				newVal[name] = value;
+				setStore({
+					agregarVino: newVal
 				});
 			},
 

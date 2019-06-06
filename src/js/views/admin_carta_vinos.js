@@ -135,22 +135,73 @@ export class CartaVinos extends React.Component {
 							</div>
 							<div className="row">
 								<div>{CartaVinos}</div>
-								<div id="card_cliente" className="card col s4 m4 l4 hoverable">
+								<div id="card_agregar" className="card col s4 m4 l4 hoverable">
 									<div
-										id="card_cliente_img"
+										id="card_agregar_trago"
 										className="card-image waves-effect waves-block waves-light">
-										<a href="https://proyecto-bar--andressies.c9users.io/register/view">
-											<img
-												id="user_cliente_img"
-												className="activator"
-												src="https://img.icons8.com/cotton/2x/plus--v1.png"
-											/>
-										</a>
+										<img
+											onClick={() => actions.agregarVinoCarta()}
+											id="agregar_trago"
+											className="activator"
+											src="https://img.icons8.com/cotton/2x/plus--v1.png"
+										/>
 									</div>
-									<div className="card-content">
-										<span className="card-title activator grey-text text-darken-4">
-											Agregar Bartender
-										</span>
+									<div className="row">
+										<form onSubmit={actions.handleSubmit} className="col s12">
+											<div className="row">
+												<div className="input-field col s12">
+													<input
+														id="name"
+														type="text"
+														className="validate"
+														name="name"
+														value={store.name}
+														onChange={actions.agregarVino}
+														placeholder="name"
+													/>
+													<label htmlFor="name">Name</label>
+													<span
+														className="helper-text"
+														data-error="wrong"
+														data-success="right"
+													/>
+												</div>
+												<div className="input-field col s12">
+													<input
+														id="precio"
+														type="text"
+														className="validate"
+														name="precio"
+														value={store.precio}
+														onChange={actions.agregarVino}
+														placeholder="precio"
+													/>
+													<label htmlFor="precio">Precio</label>
+													<span
+														className="helper-text"
+														data-error="wrong"
+														data-success="right"
+													/>
+												</div>
+												<div className="input-field col s12">
+													<input
+														id="linkImg"
+														type="text"
+														className="validate"
+														name="imagen"
+														value={store.imagen}
+														onChange={actions.agregarVino}
+														placeholder="linkImg"
+													/>
+													<label htmlFor="linkimg">Link img</label>
+													<span
+														className="helper-text"
+														data-error="wrong"
+														data-success="right"
+													/>
+												</div>
+											</div>
+										</form>
 									</div>
 								</div>
 							</div>

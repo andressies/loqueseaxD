@@ -135,28 +135,70 @@ export class CartaCervezas extends React.Component {
 							</div>
 							<div className="row">
 								<div>{CartaCervezas}</div>
-								<div id="card_cliente" className="card col s4 m4 l4 hoverable">
+								<div id="card_agregar" className="card col s4 m4 l4 hoverable">
 									<div
 										id="card_agregar_trago"
 										className="card-image waves-effect waves-block waves-light">
 										<img
+											onClick={() => actions.agregarCervezaCarta()}
 											id="agregar_trago"
 											className="activator"
 											src="https://img.icons8.com/cotton/2x/plus--v1.png"
 										/>
 									</div>
 									<div className="row">
-										<form className="col s12">
+										<form onSubmit={actions.handleSubmit} className="col s12">
 											<div className="row">
 												<div className="input-field col s12">
-													<input id="email" type="email" className="validate" />
-													<label htmlFor="email">Email</label>
+													<input
+														id="name"
+														type="text"
+														className="validate"
+														name="name"
+														value={store.name}
+														onChange={actions.agregarTrago}
+														placeholder="name"
+													/>
+													<label htmlFor="name">Name</label>
 													<span
 														className="helper-text"
 														data-error="wrong"
-														data-success="right">
-														Helper text
-													</span>
+														data-success="right"
+													/>
+												</div>
+												<div className="input-field col s12">
+													<input
+														id="precio"
+														type="text"
+														className="validate"
+														name="precio"
+														value={store.precio}
+														onChange={actions.agregarTrago}
+														placeholder="precio"
+													/>
+													<label htmlFor="precio">Precio</label>
+													<span
+														className="helper-text"
+														data-error="wrong"
+														data-success="right"
+													/>
+												</div>
+												<div className="input-field col s12">
+													<input
+														id="linkImg"
+														type="text"
+														className="validate"
+														name="imagen"
+														value={store.imagen}
+														onChange={actions.agregarTrago}
+														placeholder="linkImg"
+													/>
+													<label htmlFor="linkimg">Link img</label>
+													<span
+														className="helper-text"
+														data-error="wrong"
+														data-success="right"
+													/>
 												</div>
 											</div>
 										</form>
