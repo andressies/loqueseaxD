@@ -8,7 +8,7 @@ export class CategoriaView extends React.Component {
 			<div id="general" className="row">
 				<div className="col s12 m12 center-align">
 					<div className="card">
-						<div className="card-image">
+						<div id="card_img" className="card-image">
 							<img className="fondo_img" src="" />
 							<div className="left-align" id="promociones">
 								<p className="left-align">Welcome to</p>
@@ -45,6 +45,9 @@ export class CategoriaView extends React.Component {
 									</a>
 								</div>
 							</div>
+							<a className="btn-floating btn-large halfway-fab waves-effect waves-light teal">
+								<i className="material-icons fas fa-shopping-cart" />
+							</a>
 						</div>
 
 						<div className="card-action #000000 black ">
@@ -56,7 +59,7 @@ export class CategoriaView extends React.Component {
 
 							<div id="cerveza_icono " className="row">
 								<div className=" col s6 m6 l6 ">
-									<a>
+									<a href="https://proyecto-bar--andressies.c9users.io/drinks">
 										<img
 											className="hoverable"
 											id="cerveza_img"
@@ -65,7 +68,7 @@ export class CategoriaView extends React.Component {
 									</a>
 								</div>
 								<div id="cerveza_icono " className=" col s6 m6 l6">
-									<a>
+									<a href="https://proyecto-bar--andressies.c9users.io/vinos">
 										<img
 											className="hoverable "
 											id="cerveza_img"

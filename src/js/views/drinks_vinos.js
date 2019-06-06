@@ -6,7 +6,7 @@ import { menu1 } from "./menu_1.json";
 import { menu2 } from "./menu_2.json";
 import { Context } from "../store/appContext";
 
-export class Drinks extends React.Component {
+export class DrinksVinos extends React.Component {
 	constructor(props) {
 		super(props);
 		this.state = {
@@ -22,7 +22,7 @@ export class Drinks extends React.Component {
 		return (
 			<Context.Consumer>
 				{({ store, actions }) => {
-					const listaMenu = store.menucervezas.map((item, index) => {
+					const listaMenu = store.menuvinos.map((item, index) => {
 						return (
 							<div className="row" key={index}>
 								<div className="col s12 m6">

@@ -82,6 +82,12 @@ $bg-color-dark: #546e7a;
         background-color: #66666E;
 }
 
+#tooltipped{
+    background-color: black;
+    
+    width: 100px;
+}
+
 #cerveza_icono{
     height: 110px;
         width: 110px;
@@ -106,7 +112,7 @@ $bg-color-dark: #546e7a;
 .fondo_img{
     display: inline;
 }
-.card-image{ 
+#card_img{ 
   background: url(https://bar-legacy.com/img/main_6.jpg) no-repeat ; 
   -webkit-background-size: cover;
   -moz-background-size: cover;
@@ -147,6 +153,47 @@ $bg-color-dark: #546e7a;
 nav a.sidenav-trigger {
     display: block;
 }
+#heineken{
+    height: 250px;
+    
+    
+}
+#corona{
+    height: 250px;
+    
+    
+}
+#vinos{
+    height: 250px;
+    
+    
+}
+#enviar{
+    margin: 10px 90px 0px 90px;
+}
+#carrito_eliminar{
+    color: black;
+    margin: auto;
+}
+#card_cliente{
+    height: 350px;
+    width: 300px;
+    margin: 20px 20px 20px 20px;
+    border-radius: 15px;
+    background-color: #e0f2f1;
+}
+#card_cliente_img{
+    height: 200px;
+    width: 200px;
+    margin: auto;
+}
+#user_cliente_img{
+    height: 200px;
+    width: 150px;
+    margin: auto;
+}
+    
+
     
 
 /*.card-image{
@@ -175,8 +222,22 @@ nav a.sidenav-trigger {
 
 
 
+.tabs{
+    background-color: #52C4B9;
+    border-radius: 25px;
+    margin-bottom: 20px;
+    
+}
+.tabs .tab a{
+    color:white;
+}
+a:hover, .tabs .tab a.active{
+    color:#4C5D72;
+}
 
-
+.tabs .indicator {
+    background-color: #4C5D72; //linea de abajo
+}
 
 
 

@@ -5,6 +5,8 @@ import M from "materialize-css";
 import ScrollToTop from "./component/scrollToTop";
 
 import { AdminView } from "./views/admin_view.js";
+import { AdminViewClientes } from "./views/admin_view_clientes.js";
+import { AdminViewBartenders } from "./views/admin_view_bartender.js";
 
 import { BartenderView } from "./views/bartender_view.js";
 
@@ -12,6 +14,10 @@ import { Single } from "./views/single.js";
 import { CategoriaView } from "./views/categoria_view.js";
 import { Drinks } from "./views/drinks.js";
 import { Home } from "./views/home.js";
+import { DrinksVinos } from "./views/drinks_vinos.js";
+import { RegisterView } from "./views/register_view.js";
+import { Carrito } from "./views/carrito.js";
+import { DrinksOtros } from "./views/drinks_otro.js";
 
 import injectContext from "./store/appContext.js";
 
@@ -21,6 +27,7 @@ import { Footer } from "./component/footer.js";
 import BaseLayoutRoute from "./layouts/base.js";
 import EmptyLayoutRoute from "./layouts/empty";
 import AdminLayoutRoute from "./layouts/admin_layout.js";
+import SignInForm from "./views/SignInForm";
 
 //create your first component
 export class Layout extends React.Component {
@@ -51,9 +58,19 @@ export class Layout extends React.Component {
 
 							<Route path="/admin/view" component={AdminView} />
 
-							<Route path="/categorias/view" component={CategoriaView} />
+							<Route path="/clientes" component={AdminViewClientes} />
+
+							<Route path="/user_bartender" component={AdminViewBartenders} />
+
+							<Route exact path="/categorias/view" component={CategoriaView} />
 
 							<Route path="/drinks" component={Drinks} />
+
+							<Route path="/drinksOtros" component={DrinksOtros} />
+
+							<Route path="/vinos" component={DrinksVinos} />
+
+							<Route path="/carrito" component={Carrito} />
 
 							<Route render={() => <h1>Not found!</h1>} />
 						</Switch>

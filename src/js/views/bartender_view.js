@@ -23,3 +23,6 @@ export class BartenderView extends React.Component {
 		);
 	}
 }
+BartenderView.propTypes = {
+	history: PropTypes.any
+};

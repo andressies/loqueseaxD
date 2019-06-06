@@ -7,7 +7,33 @@ import "../../styles/Login.scss";
 export class Home extends React.Component {
 	render() {
 		return (
-			<Router basename="/react-auth-ui/">
+			<div className="App">
+				<div className="App__Aside" />
+				<div className="App__Form">
+					<div className="row">
+						<div className="col s10">
+							<ul id="asd" className="tabs">
+								<li className="tab col s3">
+									<a href="#test1">Sign In</a>
+								</li>
+								<li className="tab col s3">
+									<a className="active" href="#test2">
+										Sign Up
+									</a>
+								</li>
+							</ul>
+						</div>
+						<div id="test1" className="col s12">
+							<SignInForm />
+						</div>
+						<div id="test2" className="col s12">
+							<SignUpForm />
+						</div>
+					</div>
+				</div>
+			</div>
+			/********Login With Route
+			<Router>
 				<div className="App">
 					<div className="App__Aside" />
 					<div className="App__Form">
@@ -47,6 +73,7 @@ export class Home extends React.Component {
 					</div>
 				</div>
 			</Router>
+			 **********************/
 
 			/************ Login antiguo
 			<div className="valign-wrapper layout-external center-align ">
@@ -79,33 +106,57 @@ export class Home extends React.Component {
 													Password
 												</label>
 											</div>
-											<div className="input-field left-align col s12 ">
-												<p className="col s6 ">
-													<label>
-														<input
-															type="checkbox"
-															className="filled-in "
-															defaultChecked="checked"
-														/>
-														<span>Remember me</span>
-													</label>
-												</p>
-												<p className="check_admin_user right-align col s6">
-													<label>
-														<input
-															type="checkbox"
-															className="filled-in "
-															defaultChecked="checked"
-														/>
-														<span>Admin User</span>
-													</label>
-												</p>
+											<div className="input-field left-align col s12 m12 l12">
+												<div className=" left-align col s6 m6 l6">
+													<p className="">
+														<label>
+															<input
+																type="checkbox"
+																className="filled-in  "
+																defaultChecked="checked"
+															/>
+															<span>Remember me</span>
+														</label>
+													</p>
+												</div>
+												<div className=" right-align col s6 m6 l6">
+													<div>
+														<p className="check_admin_user  ">
+															<label>
+																<input
+																	id="adminUser"
+																	type="checkbox"
+																	className="filled-in left-align "
+																	defaultChecked="checked"
+																/>
+																<span>Admin User</span>
+															</label>
+														</p>
+													</div>
+													<div>
+														<p className="check_bartender_user  ">
+															<label>
+																<input
+																	type="checkbox"
+																	className="filled-in left-align "
+																	defaultChecked="checked"
+																/>
+																<span>Bartender </span>
+															</label>
+														</p>
+													</div>
+												</div>
 											</div>
+
 											<a className="btn-floating btn-large pulse waves-effect waves-green">
 												<i className="material-icons fas fa-sign-in-alt" />
 											</a>
 										</form>
-										<a className="right">registrarse</a>
+										<a
+											href="https://proyecto-bar--andressies.c9users.io/register/view"
+											className="right">
+											registrarse
+										</a>
 									</div>
 								</div>
 							</div>
