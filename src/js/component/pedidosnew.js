@@ -33,7 +33,7 @@ export class Pedidos2 extends React.Component {
 
 												<li>
 													<a
-														onClick={() => actions.borrarOrden(index)}
+														onClick={() => actions.borrarOrden(indexgit)}
 														id="carrito_eliminar"
 														className="waves-effect waves-light btn">
 														<i className="fas fa-trash-alt" />
