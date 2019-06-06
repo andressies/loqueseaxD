@@ -88,9 +88,11 @@ export class AdminViewBartenders extends React.Component {
 									</li>
 									<li>
 										<a href="#!">
+										<a href="https://proyecto-bar--andressies.c9users.io/user_bartender">
 											<i className="fas fa-user-tie" />
 											Bartender
 										</a>
+																				</a>
 									</li>
 									<li>
 										<a href="#!">
@@ -99,6 +101,26 @@ export class AdminViewBartenders extends React.Component {
 											Carta
 										</a>
 									</li>
+									<ul className="collapsible">
+										<li>
+											<div className="collapsible-header">
+												<i className="material-icons fas fa-book-open" />
+												Carta
+											</div>
+											<div className="collapsible-body">
+												<li>
+													<a href="https://proyecto-bar--andressies.c9users.io/carta">
+														<span>Cervezas</span>
+													</a>
+												</li>
+												<li>
+													<a href="https://proyecto-bar--andressies.c9users.io/cartaVinos">
+														<span>Vinos</span>
+													</a>
+												</li>
+											</div>
+										</li>
+									</ul>
 									<li>
 										<a href="#!">
 											<i className="fas fa-couch" />

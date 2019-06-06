@@ -1,6 +1,7 @@
 const getState = ({ getStore, setStore }) => {
 	return {
 		store: {
+
 			pedidos: [
 				{
 					id: 1,
@@ -84,12 +85,33 @@ const getState = ({ getStore, setStore }) => {
 			},
 			bartenders: [
 				{
+=======
+			lista: [],
+			pedido: [],
+			registerBartender: {
+				password: "",
+				name: "",
+				first_name: "",
+				last_name: "",
+				email: ""
+			},
+			agregarCerveza: {
+				name: "",
+				categoria: "cerveza",
+				precio: "",
+				imagen: "",
+				icono: "fas fa-wine-glass-alt"
+			},
+			bartenders: [
+				{
+>>>>>>> a848fc30abc3348db4e85ba62fe37099d3c9f34e
 					name: "bartender1",
 					first_name: "kfrkfir",
 					lastName: "qwerty",
 					age: "24",
 					password: "mnbmnb",
 					email: "asdas@gmail.com"
+
 				},
 				{
 					name: "bartender1",
@@ -128,6 +150,46 @@ const getState = ({ getStore, setStore }) => {
 					email: "asdas@gmail.com"
 				},
 				{
+=======
+				},
+				{
+					name: "bartender1",
+					first_name: "kfrkfir",
+					lastName: "qwerty",
+					age: "24",
+					password: "mnbmnb",
+					email: "asdas@gmail.com"
+				},
+				{
+					name: "bartender1",
+					first_name: "kfrkfir",
+					lastName: "qwerty",
+					age: "24",
+					password: "mnbmnb",
+					email: "asdas@gmail.com"
+				}
+			],
+			clientes: [
+				{
+					name: "asdasdsa1",
+					lastName: "qwerty",
+					age: "24",
+					email: "asdas@gmail.com"
+				},
+				{
+					name: "asdasdsa2",
+					lastName: "qwerty",
+					age: "24",
+					email: "asdas@gmail.com"
+				},
+				{
+					name: "asdasdsa3",
+					lastName: "qwerty",
+					age: "24",
+					email: "asdas@gmail.com"
+				},
+				{
+
 					name: "asdasdsa4",
 					lastName: "qwerty",
 					age: "24",
@@ -220,6 +282,7 @@ const getState = ({ getStore, setStore }) => {
 				{
 					name: "corona",
 
+
 					categoria: "cerveza",
 
 					precio: "123123",
@@ -261,6 +324,32 @@ const getState = ({ getStore, setStore }) => {
 					precio: "12",
 
 					imagen: "http://www.elefete.com/wp-content/uploads/2018/05/cerveza-corona.jpg",
+
+					categoria: "cerveza",
+					precio: "123123",
+					imagen: "http://www.elefete.com/wp-content/uploads/2018/05/cerveza-corona.jpg",
+					icono: "fas fa-beer"
+				},
+				{
+					name: "corona 2",
+					categoria: "cerveza",
+					precio: "12",
+					imagen: "http://www.elefete.com/wp-content/uploads/2018/05/cerveza-corona.jpg",
+					icono: "fas fa-beer"
+				},
+				{
+					name: "corona 2",
+					categoria: "cerveza",
+					precio: "12",
+					imagen: "http://www.elefete.com/wp-content/uploads/2018/05/cerveza-corona.jpg",
+					icono: "fas fa-beer"
+				},
+				{
+					name: "corona 3",
+					categoria: "cerveza",
+					precio: "12",
+					imagen: "http://www.elefete.com/wp-content/uploads/2018/05/cerveza-corona.jpg",
+
 
 					categoria: "cerveza",
 					precio: "123123",
@@ -312,6 +401,7 @@ const getState = ({ getStore, setStore }) => {
 				console.log(store.menuvinos);
 			},
 
+
 			tomarPedido: item => {
 				const store = getStore();
 				const newPedido = store.pedidos.filter(el => el.id !== item.id);
@@ -361,6 +451,25 @@ const getState = ({ getStore, setStore }) => {
 				});
 				console.log(tmp);
 			},
+<<<<<<< HEAD
+=======
+			agregarCervezaCarta: item => {
+				const store = getStore();
+				const tmp = store.menucervezas;
+				tmp.push(store.agregarCerveza);
+				setStore({
+					menucervezas: tmp,
+					agregarCerveza: {
+						name: "",
+						categoria: "cerveza",
+						precio: "",
+						imagen: "",
+						icono: "fas fa-wine-glass-alt"
+					}
+				});
+				console.log(tmp);
+			},
+
 			mostrar() {
 				const store = getStore();
 				console.log(store.registerBartender);
@@ -401,6 +510,17 @@ const getState = ({ getStore, setStore }) => {
 				});
 			},
 
+			agregarTrago(e) {
+				const store = getStore();
+				const { value, name } = e.target;
+				let newVal = store.agregarCerveza;
+				newVal[name] = value;
+				setStore({
+					agregarCerveza: newVal
+				});
+			},
+
+
 			prueba(index) {
 				const store = getStore();
 				console.log(index);
@@ -415,6 +535,16 @@ const getState = ({ getStore, setStore }) => {
 					})
 				});
 			},
+
+			borrarCartaVinos(index) {
+				const store = getStore();
+				setStore({
+					menuvinos: store.menuvinos.filter((e, i) => {
+						return i !== index;
+					})
+				});
+			},
+
 			borrarBartender(index) {
 				const store = getStore();
 				setStore({
@@ -423,6 +553,7 @@ const getState = ({ getStore, setStore }) => {
 					})
 				});
 			},
+
 			borrarCliente(index) {
 				const store = getStore();
 				setStore({

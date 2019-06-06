@@ -53,8 +53,10 @@ export class AdminView extends React.Component {
 										<a href="https://proyecto-bar--andressies.c9users.io/user_bartender">
 											<i className="fas fa-user-tie" />
 											Bartender
-										</a>
+										</a> 	
+											
 									</li>
+<<<<<<< HEAD
 									<li>
 										<a href="#!">
 											{" "}
@@ -62,6 +64,28 @@ export class AdminView extends React.Component {
 											Carta
 										</a>
 									</li>
+=======
+									<ul className="collapsible">
+										<li>
+											<div className="collapsible-header">
+												<i className="material-icons fas fa-book-open" />
+												Carta
+											</div>
+											<div className="collapsible-body">
+												<li>
+													<a href="https://proyecto-bar--andressies.c9users.io/carta">
+														<span>Cervezas</span>
+													</a>
+												</li>
+												<li>
+													<a href="https://proyecto-bar--andressies.c9users.io/cartaVinos">
+														<span>Vinos</span>
+													</a>
+												</li>
+											</div>
+										</li>
+									</ul>
+>>>>>>> a848fc30abc3348db4e85ba62fe37099d3c9f34e
 									<li>
 										<a href="#!">
 											<i className="fas fa-couch" />
