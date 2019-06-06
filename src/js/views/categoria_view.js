@@ -45,7 +45,9 @@ export class CategoriaView extends React.Component {
 									</a>
 								</div>
 							</div>
-							<a className="btn-floating btn-large halfway-fab waves-effect waves-light teal">
+							<a
+								href="https://proyecto-bar--andressies.c9users.io/carrito"
+								className="btn-floating btn-large halfway-fab waves-effect waves-light teal">
 								<i className="material-icons fas fa-shopping-cart" />
 							</a>
 						</div>

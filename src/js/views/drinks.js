@@ -2,18 +2,12 @@ import ReactDOM from "react-dom";
 import React, { Component } from "react";
 import PropTypes from "prop-types";
 
-import { menu1 } from "./menu_1.json";
-import { menu2 } from "./menu_2.json";
 import { Context } from "../store/appContext";
 
 export class Drinks extends React.Component {
 	constructor(props) {
 		super(props);
-		this.state = {
-			lista: [],
-
-			menu2
-		};
+		this.state = {};
 	}
 	//agrega y guarda en una nueva lista//
 
@@ -55,8 +49,7 @@ export class Drinks extends React.Component {
 											<i className="fas fa-arrow-left" />
 										</a>
 										<a href="#!" className="brand-logo">
-											Vinos
-											Cervezas
+											Vinos Cervezas
 										</a>
 									</div>
 									<div className="nav-content">

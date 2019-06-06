@@ -92,13 +92,7 @@ export class AdminViewClientes extends React.Component {
 											Bartender
 										</a>
 									</li>
-									<li>
-										<a href="#!">
-											{" "}
-											<i className="fas fa-book-open" />
-											Carta
-										</a>
-									</li>
+
 									<ul className="collapsible">
 										<li>
 											<div className="collapsible-header">

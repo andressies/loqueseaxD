@@ -2,8 +2,6 @@ import ReactDOM from "react-dom";
 import React, { Component } from "react";
 import PropTypes from "prop-types";
 
-import { menu1 } from "./menu_1.json";
-import { menu2 } from "./menu_2.json";
 import { Context } from "../store/appContext";
 
 export class Carrito extends React.Component {

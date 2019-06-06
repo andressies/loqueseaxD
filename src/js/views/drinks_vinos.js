@@ -2,18 +2,12 @@ import ReactDOM from "react-dom";
 import React, { Component } from "react";
 import PropTypes from "prop-types";
 
-import { menu1 } from "./menu_1.json";
-import { menu2 } from "./menu_2.json";
 import { Context } from "../store/appContext";
 
 export class DrinksVinos extends React.Component {
 	constructor(props) {
 		super(props);
-		this.state = {
-			lista: [],
-
-			menu2
-		};
+		this.state = {};
 	}
 	//agrega y guarda en una nueva lista//
 
@@ -60,6 +54,7 @@ export class DrinksVinos extends React.Component {
 									</div>
 									<div className="nav-content">
 										<a
+											href="https://proyecto-bar--andressies.c9users.io/carrito"
 											onClick={actions.mostrar}
 											className="btn-floating btn-large halfway-fab waves-effect waves-light teal">
 											<i className="material-icons fas fa-shopping-cart" />

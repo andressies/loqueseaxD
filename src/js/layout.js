@@ -6,11 +6,8 @@ import ScrollToTop from "./component/scrollToTop";
 
 import { Home } from "./views/home.js";
 import { AdminView } from "./views/admin_view.js";
-import { ListadoPedidos } from "./component/listadoPedidos";
 
 import { BartenderView } from "./views/bartender_view.js";
-import { Ordenes } from "./component/ordenes.js";
-import { Context } from "./store/appContext";
 
 import { Single } from "./views/single.js";
 import { CategoriaView } from "./views/categoria_view.js";
@@ -21,12 +18,10 @@ import { Carrito } from "./views/carrito.js";
 import { DrinksOtros } from "./views/drinks_otro.js";
 import { CartaCervezas } from "./views/admin_carta.js";
 import { CartaVinos } from "./views/admin_carta_vinos.js";
-
 import { AdminViewClientes } from "./views/admin_view_clientes.js";
 import { AdminViewBartenders } from "./views/admin_view_bartender.js";
 
 import injectContext from "./store/appContext.js";
-import { Pedidos } from "./component/bb.js";
 
 import { Navbar } from "./component/navbar.js";
 import { Footer } from "./component/footer.js";
@@ -72,15 +67,12 @@ export class Layout extends React.Component {
 							<Route path="/user_bartender" component={AdminViewBartenders} />
 
 							<Route path="/categorias/view" component={CategoriaView} />
-							<Route path="/ordenes/component" component={Ordenes} />
-							<Route path="/bb/component" component={Pedidos} />
 
 							<Route path="/drinks" component={Drinks} />
 
 							<Route path="/carta" component={CartaCervezas} />
 
 							<Route path="/cartaVinos" component={CartaVinos} />
-
 
 							<Route path="/drinksOtros" component={DrinksOtros} />
 

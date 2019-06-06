@@ -1,7 +1,6 @@
 const getState = ({ getStore, setStore }) => {
 	return {
 		store: {
-
 			pedidos: [
 				{
 					id: 1,
@@ -62,17 +61,6 @@ const getState = ({ getStore, setStore }) => {
 				}
 			],
 			tomados: [],
-			menucervezas: [
-				{
-					name: "heineken",
-
-					categoria: "cerveza",
-
-					precio: "123123",
-
-					imagen: "https://www.biernet.nl/images/merken/38870-heineken%20pilsener.jpg"
-				}
-			],
 
 			lista: [],
 			pedido: [],
@@ -83,11 +71,9 @@ const getState = ({ getStore, setStore }) => {
 				last_name: "",
 				email: ""
 			},
-			bartenders: [
-				{
-=======
+
 			lista: [],
-			pedido: [],
+
 			registerBartender: {
 				password: "",
 				name: "",
@@ -111,53 +97,12 @@ const getState = ({ getStore, setStore }) => {
 			},
 			bartenders: [
 				{
->>>>>>> a848fc30abc3348db4e85ba62fe37099d3c9f34e
 					name: "bartender1",
 					first_name: "kfrkfir",
 					lastName: "qwerty",
 					age: "24",
 					password: "mnbmnb",
 					email: "asdas@gmail.com"
-
-				},
-				{
-					name: "bartender1",
-					first_name: "kfrkfir",
-					lastName: "qwerty",
-					age: "24",
-					password: "mnbmnb",
-					email: "asdas@gmail.com"
-				},
-				{
-					name: "bartender1",
-					first_name: "kfrkfir",
-					lastName: "qwerty",
-					age: "24",
-					password: "mnbmnb",
-					email: "asdas@gmail.com"
-				}
-			],
-			clientes: [
-				{
-					name: "asdasdsa1",
-					lastName: "qwerty",
-					age: "24",
-					email: "asdas@gmail.com"
-				},
-				{
-					name: "asdasdsa2",
-					lastName: "qwerty",
-					age: "24",
-					email: "asdas@gmail.com"
-				},
-				{
-					name: "asdasdsa3",
-					lastName: "qwerty",
-					age: "24",
-					email: "asdas@gmail.com"
-				},
-				{
-=======
 				},
 				{
 					name: "bartender1",
@@ -195,8 +140,44 @@ const getState = ({ getStore, setStore }) => {
 					age: "24",
 					email: "asdas@gmail.com"
 				},
+				{},
 				{
-
+					name: "bartender1",
+					first_name: "kfrkfir",
+					lastName: "qwerty",
+					age: "24",
+					password: "mnbmnb",
+					email: "asdas@gmail.com"
+				},
+				{
+					name: "bartender1",
+					first_name: "kfrkfir",
+					lastName: "qwerty",
+					age: "24",
+					password: "mnbmnb",
+					email: "asdas@gmail.com"
+				}
+			],
+			clientes2: [
+				{
+					name: "asdasdsa1",
+					lastName: "qwerty",
+					age: "24",
+					email: "asdas@gmail.com"
+				},
+				{
+					name: "asdasdsa2",
+					lastName: "qwerty",
+					age: "24",
+					email: "asdas@gmail.com"
+				},
+				{
+					name: "asdasdsa3",
+					lastName: "qwerty",
+					age: "24",
+					email: "asdas@gmail.com"
+				},
+				{
 					name: "asdasdsa4",
 					lastName: "qwerty",
 					age: "24",
@@ -289,7 +270,6 @@ const getState = ({ getStore, setStore }) => {
 				{
 					name: "corona",
 
-
 					categoria: "cerveza",
 
 					precio: "123123",
@@ -356,7 +336,6 @@ const getState = ({ getStore, setStore }) => {
 					categoria: "cerveza",
 					precio: "12",
 					imagen: "http://www.elefete.com/wp-content/uploads/2018/05/cerveza-corona.jpg",
-
 
 					categoria: "cerveza",
 					precio: "123123",
@@ -408,7 +387,6 @@ const getState = ({ getStore, setStore }) => {
 				console.log(store.menuvinos);
 			},
 
-
 			tomarPedido: item => {
 				const store = getStore();
 				const newPedido = store.pedidos.filter(el => el.id !== item.id);
@@ -458,8 +436,7 @@ const getState = ({ getStore, setStore }) => {
 				});
 				console.log(tmp);
 			},
-<<<<<<< HEAD
-=======
+
 			agregarCervezaCarta: item => {
 				const store = getStore();
 				const tmp = store.menucervezas;
@@ -495,7 +472,7 @@ const getState = ({ getStore, setStore }) => {
 
 			mostrar() {
 				const store = getStore();
-				console.log(store.registerBartender);
+				console.log(store.lista);
 			},
 			/*handleChange(e) {
 				const store = getStore();
@@ -551,7 +528,6 @@ const getState = ({ getStore, setStore }) => {
 					agregarVino: newVal
 				});
 			},
-
 
 			prueba(index) {
 				const store = getStore();
