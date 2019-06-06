@@ -4,7 +4,6 @@ import M from "materialize-css";
 
 import ScrollToTop from "./component/scrollToTop";
 
-import { Home } from "./views/home.js";
 import { AdminView } from "./views/admin_view.js";
 
 import { BartenderView } from "./views/bartender_view.js";
@@ -12,6 +11,7 @@ import { BartenderView } from "./views/bartender_view.js";
 import { Single } from "./views/single.js";
 import { CategoriaView } from "./views/categoria_view.js";
 import { Drinks } from "./views/drinks.js";
+import { Home } from "./views/home.js";
 import { DrinksVinos } from "./views/drinks_vinos.js";
 import { RegisterView } from "./views/register_view.js";
 import { Carrito } from "./views/carrito.js";
@@ -27,7 +27,9 @@ import { Navbar } from "./component/navbar.js";
 import { Footer } from "./component/footer.js";
 
 import BaseLayoutRoute from "./layouts/base.js";
+import EmptyLayoutRoute from "./layouts/empty";
 import AdminLayoutRoute from "./layouts/admin_layout.js";
+import SignInForm from "./views/SignInForm";
 
 //create your first component
 export class Layout extends React.Component {
@@ -46,17 +48,13 @@ export class Layout extends React.Component {
 				<BrowserRouter basename={basename}>
 					<ScrollToTop>
 						<Switch>
-							<BaseLayoutRoute exact path="/" component={Home} />
+							<EmptyLayoutRoute exact path="/" component={Home} />
 
 							<Route path="/single/:theid" component={Single} />
 
 							<AdminLayoutRoute path="/admin/view/users" component={Navbar} />
 
 							<Route path="/bartender/view" component={BartenderView} />
-
-							<Route path="/register/view" component={RegisterView} />
-
-							<Route exact path="/" component={Home} />
 
 							<Route path="/single/:theid" component={Single} />
 
@@ -66,7 +64,7 @@ export class Layout extends React.Component {
 
 							<Route path="/user_bartender" component={AdminViewBartenders} />
 
-							<Route path="/categorias/view" component={CategoriaView} />
+							<Route exact path="/categorias/view" component={CategoriaView} />
 
 							<Route path="/drinks" component={Drinks} />
 

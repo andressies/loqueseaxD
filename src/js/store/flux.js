@@ -368,6 +368,48 @@ const getState = ({ getStore, setStore }) => {
 		},
 
 		actions: {
+			login: (username, password, path) => {
+				let data = {
+					username: username,
+					password: password
+				};
+				fetch("http://127.0.0.1:8000/api/login/", {
+					method: "POST",
+					body: JSON.stringify(data),
+					headers: {
+						"Content-Type": "application/json"
+					}
+				})
+					.then(resp => resp.json())
+					.then(resp => {
+						console.log(resp);
+						if (resp.token) {
+							localStorage.setItem("token", resp.token);
+							if (resp.role_id == 1) {
+								path.push("/categorias/view");
+							}
+							if (resp.role_id == 2) {
+								path.push("/bartender/view");
+							}
+						}
+					});
+			},
+			registerCliente: (username, first_name, last_name, email, password) => {
+				let data = {
+					username: username,
+					first_name: first_name,
+					last_name: last_name,
+					email: email,
+					password: password
+				};
+				fetch("http://127.0.0.1:8000/api/registercliente/", {
+					method: "POST",
+					body: JSON.stringify(data),
+					headers: {
+						"Content-Type": "application/json"
+					}
+				});
+			},
 			changeColor: (index, color) => {
 				//get the store
 				const store = getStore();
