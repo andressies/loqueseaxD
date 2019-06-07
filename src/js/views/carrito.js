@@ -66,6 +66,7 @@ export class Carrito extends React.Component {
 							<div className="row">
 								<ul className="collapsible popout">{listaMenu}</ul>
 								<a
+									href="https://proyecto-bar--andressies.c9users.io/categorias/view"
 									onClick={() => actions.enviar()}
 									id="enviar"
 									className="waves-effect waves-light btn col s6 m6 l6">
