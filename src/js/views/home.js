@@ -2,7 +2,7 @@ import React from "react";
 import { HashRouter as Router, Route, Link, NavLink } from "react-router-dom";
 import SignUpForm from "./SignUpForm";
 import SignInForm from "./SignInForm";
-import "../../styles/Login.scss";
+import "../../styles/login.scss";
 
 export class Home extends React.Component {
 	render() {
@@ -73,7 +73,7 @@ export class Home extends React.Component {
 					</div>
 				</div>
 			</Router>
-			 **********************/
+			
 
 			/************ Login antiguo
 			<div className="valign-wrapper layout-external center-align ">

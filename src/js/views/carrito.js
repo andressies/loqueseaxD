@@ -1,15 +1,18 @@
 import ReactDOM from "react-dom";
 import React, { Component } from "react";
 import PropTypes from "prop-types";
+import M from "materialize-css";
 
 import { Context } from "../store/appContext";
 
 export class Carrito extends React.Component {
 	constructor(props) {
 		super(props);
-		this.state = {
-			lista: []
-		};
+		this.state = {};
+	}
+	componentDidMount() {
+		// Auto initialize all the things!
+		M.AutoInit();
 	}
 
 	// hace un recorrido a "la lista de pedidos"//
@@ -17,7 +20,7 @@ export class Carrito extends React.Component {
 		return (
 			<Context.Consumer>
 				{({ store, actions }) => {
-					const listaMenu = store.menucervezas.map((item, index) => {
+					const listaMenu = store.Carrito.map((item, index) => {
 						return (
 							<li key={index}>
 								<div className="collapsible-header">
@@ -32,7 +35,7 @@ export class Carrito extends React.Component {
 											<li>Precio : ${item.precio}</li>
 											<li>
 												<a
-													onClick={() => actions.borrar(index)}
+													onClick={() => actions.borrarCarrito(index)}
 													id="carrito_eliminar"
 													className="waves-effect waves-light btn">
 													<i className="fas fa-trash-alt" />

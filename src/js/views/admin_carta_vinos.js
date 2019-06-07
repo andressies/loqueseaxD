@@ -3,8 +3,13 @@ import React, { Component } from "react";
 import PropTypes from "prop-types";
 import { Navbar } from "../component/navbar.js";
 import { Context } from "../store/appContext";
+import { Link } from "react-router-dom";
+import M from "materialize-css";
 
 export class CartaVinos extends React.Component {
+	componentDidMount() {
+		M.AutoInit();
+	}
 	render() {
 		return (
 			<Context.Consumer>
@@ -66,16 +71,16 @@ export class CartaVinos extends React.Component {
 									</li>
 									<div className="divider" />
 									<li>
-										<a href="https://proyecto-bar--andressies.c9users.io/clientes">
+										<Link to="/clientes">
 											<i className="material-icons fas fa-users" />
 											Users
-										</a>
+										</Link>
 									</li>
 									<li>
-										<a href="https://proyecto-bar--andressies.c9users.io/user_bartender">
+										<Link to="/user_bartender">
 											<i className="fas fa-user-tie" />
 											Bartender
-										</a>
+										</Link>
 									</li>
 									<ul className="collapsible">
 										<li>
@@ -85,14 +90,14 @@ export class CartaVinos extends React.Component {
 											</div>
 											<div className="collapsible-body">
 												<li>
-													<a href="https://proyecto-bar--andressies.c9users.io/carta">
+													<Link to="/carta">
 														<span>Cervezas</span>
-													</a>
+													</Link>
 												</li>
 												<li>
-													<a href="https://proyecto-bar--andressies.c9users.io/cartaVinos">
+													<Link to="/cartaVinos">
 														<span>Vinos</span>
-													</a>
+													</Link>
 												</li>
 											</div>
 										</li>

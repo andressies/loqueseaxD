@@ -101,6 +101,7 @@ $bg-color-dark: #546e7a;
 }
 .card-action{
     border-radius: 15px;
+        height: 600px;
     
 }
 .carousel{
@@ -213,7 +214,28 @@ nav a.sidenav-trigger {
     border-radius: 15px;
     background-color: #e0f2f1;
 }
+#categoria_cervezas{
+    height: 190px;
+    border-radius: 15px;
     
+}   
+#categoria_beer_content{
+    height: 130px;
+    margin: auto;
+    border-radius: 15px;
+}
+#gotobeer{
+    height: 70px;
+    margin: auto;
+    border-radius: 15px;
+}
+#imgcategoriabeer{
+    height: 170px;
+    width: 180px;
+    margin: 10px 10px 10px 10px;
+    border-radius: 15px;
+    
+}
 
     
 
@@ -394,17 +416,22 @@ a:hover, .tabs .tab a.active{
 }
 #fondopedidos{
     background-color: transparent ;
+    
 }
 #fondo6{
-    background-color:red;
+    background-color: #4db6ac;
+    border-radius: 15px;
 }
 #fondo7{
-    background-color:green;
+    background-color: #039be5;
+    border-radius: 15px;
+    
 }
 #fondo8{
     background-color:green;
 }
 
 #fondo9{
-    background-color:red;
+    background-color: #4db6ac;
+    border-radius: 15px;
 }

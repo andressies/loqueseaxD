@@ -6,61 +6,63 @@ const getState = ({ getStore, setStore }) => {
 					id: 1,
 					name: "heineken",
 					categoria: "cerveza",
-					precio: "123123",
+					precio: "$ 2.000",
 					imagen: "https://www.biernet.nl/images/merken/38870-heineken%20pilsener.jpg",
+
 					icono: "fas fa-beer"
 				},
-
 				{
 					id: 2,
-					name: "corona 3",
+					name: "heineken",
 					categoria: "cerveza",
-					precio: "123123",
-					imagen: "http://www.elefete.com/wp-content/uploads/2018/05/cerveza-corona.jpg",
+					precio: "$ 2.000",
+					imagen: "https://www.biernet.nl/images/merken/38870-heineken%20pilsener.jpg",
+
 					icono: "fas fa-beer"
 				},
 				{
 					id: 3,
-					name: "corona 5",
+					name: "corona",
+
 					categoria: "cerveza",
-					precio: "123123",
+
+					precio: "$ 2.000",
+
 					imagen: "http://www.elefete.com/wp-content/uploads/2018/05/cerveza-corona.jpg",
+
 					icono: "fas fa-beer"
 				},
 				{
 					id: 4,
-					name: "corona 6",
-					categoria: "cerveza",
-					precio: "123123",
-					imagen: "http://www.elefete.com/wp-content/uploads/2018/05/cerveza-corona.jpg",
-					icono: "fas fa-beer"
+					name: "Misiones Carmenere",
+					categoria: "vino",
+					precio: "$4.600",
+					imagen:
+						"https://cdn.shopify.com/s/files/1/2196/9115/articles/shutterstock_562243966-1_2048x.jpg?v=1534175641",
+					icono: "fas fa-wine-glass-alt"
+				},
+				{
+					id: 5,
+					name: "casillero Merlot",
+					categoria: "vino",
+					precio: "$4.600",
+					imagen:
+						"https://cdn.shopify.com/s/files/1/2196/9115/articles/shutterstock_562243966-1_2048x.jpg?v=1534175641",
+					icono: "fas fa-wine-glass-alt"
 				},
 				{
 					id: 6,
-					name: "heineken 5",
-					categoria: "cerveza",
-					precio: "123123",
-					imagen: "http://www.elefete.com/wp-content/uploads/2018/05/cerveza-corona.jpg",
-					icono: "fas fa-beer"
-				},
-				{
-					id: 7,
-					name: "corona 6",
-					categoria: "cerveza",
-					precio: "123123",
-					imagen: "http://www.elefete.com/wp-content/uploads/2018/05/cerveza-corona.jpg",
-					icono: "fas fa-beer"
-				},
-				{
-					id: 8,
-					name: "heineken",
-					categoria: "cerveza",
-					precio: "123123",
-					imagen: "http://www.elefete.com/wp-content/uploads/2018/05/cerveza-corona.jpg",
-					icono: "fas fa-beer"
+					name: "casillero Merlot",
+					categoria: "vino",
+					precio: "$4.600",
+					imagen:
+						"https://cdn.shopify.com/s/files/1/2196/9115/articles/shutterstock_562243966-1_2048x.jpg?v=1534175641",
+					icono: "fas fa-wine-glass-alt"
 				}
 			],
 			tomados: [],
+			Carrito: [],
+			PedidoListo: [],
 
 			lista: [],
 			pedido: [],
@@ -71,8 +73,6 @@ const getState = ({ getStore, setStore }) => {
 				last_name: "",
 				email: ""
 			},
-
-			lista: [],
 
 			registerBartender: {
 				password: "",
@@ -193,34 +193,51 @@ const getState = ({ getStore, setStore }) => {
 
 			menuvinos: [
 				{
-					name: "juguito de uva",
+					name: "Misiones Carmenere",
 					categoria: "vino",
-					precio: "123123",
+					precio: "$4.600",
 					imagen:
 						"https://cdn.shopify.com/s/files/1/2196/9115/articles/shutterstock_562243966-1_2048x.jpg?v=1534175641",
 					icono: "fas fa-wine-glass-alt"
 				},
 				{
-					name: "juguito de uva",
+					name: "Misiones Merlot",
 					categoria: "vino",
-					precio: "123123",
+					precio: "$4.600",
 					imagen:
 						"https://cdn.shopify.com/s/files/1/2196/9115/articles/shutterstock_562243966-1_2048x.jpg?v=1534175641",
 					icono: "fas fa-wine-glass-alt"
 				},
 
 				{
-					name: "asdasd",
+					name: "Misiones Cabernet Sauvignon",
 					categoria: "vino",
-					precio: "123123",
+					precio: "$4.600",
 					imagen: "https://publiko.mx/wp-content/uploads/2019/02/vino.jpg",
 					icono: "fas fa-wine-glass-alt"
 				},
 				{
-					name: "corona 2",
+					name: "Casillero Carmenere",
 					categoria: "vino",
-					precio: "12",
-					imagen: "http://www.elefete.com/wp-content/uploads/2018/05/cerveza-corona.jpg",
+					precio: "$4.600",
+					imagen:
+						"https://cdn.shopify.com/s/files/1/2196/9115/articles/shutterstock_562243966-1_2048x.jpg?v=1534175641",
+					icono: "fas fa-wine-glass-alt"
+				},
+				{
+					name: "casillero Merlot",
+					categoria: "vino",
+					precio: "$4.600",
+					imagen:
+						"https://cdn.shopify.com/s/files/1/2196/9115/articles/shutterstock_562243966-1_2048x.jpg?v=1534175641",
+					icono: "fas fa-wine-glass-alt"
+				},
+
+				{
+					name: "casillero Cabernet Sauvignon",
+					categoria: "vino",
+					precio: "$4.600",
+					imagen: "https://publiko.mx/wp-content/uploads/2019/02/vino.jpg",
 					icono: "fas fa-wine-glass-alt"
 				}
 			],
@@ -261,7 +278,7 @@ const getState = ({ getStore, setStore }) => {
 				{
 					name: "heineken",
 					categoria: "cerveza",
-					precio: "123123",
+					precio: "$ 2.000",
 					imagen: "https://www.biernet.nl/images/merken/38870-heineken%20pilsener.jpg",
 
 					icono: "fas fa-beer"
@@ -272,7 +289,7 @@ const getState = ({ getStore, setStore }) => {
 
 					categoria: "cerveza",
 
-					precio: "123123",
+					precio: "$ 2.000",
 
 					imagen: "http://www.elefete.com/wp-content/uploads/2018/05/cerveza-corona.jpg",
 
@@ -284,82 +301,8 @@ const getState = ({ getStore, setStore }) => {
 
 					categoria: "cerveza",
 
-					precio: "12",
+					precio: "$ 2.000",
 
-					imagen: "http://www.elefete.com/wp-content/uploads/2018/05/cerveza-corona.jpg",
-
-					icono: "fas fa-beer"
-				},
-
-				{
-					name: "corona 2",
-
-					categoria: "cerveza",
-
-					precio: "12",
-
-					imagen: "http://www.elefete.com/wp-content/uploads/2018/05/cerveza-corona.jpg",
-
-					icono: "fas fa-beer"
-				},
-
-				{
-					name: "corona 3",
-
-					categoria: "cerveza",
-
-					precio: "12",
-
-					imagen: "http://www.elefete.com/wp-content/uploads/2018/05/cerveza-corona.jpg",
-
-					categoria: "cerveza",
-					precio: "123123",
-					imagen: "http://www.elefete.com/wp-content/uploads/2018/05/cerveza-corona.jpg",
-					icono: "fas fa-beer"
-				},
-				{
-					name: "corona 2",
-					categoria: "cerveza",
-					precio: "12",
-					imagen: "http://www.elefete.com/wp-content/uploads/2018/05/cerveza-corona.jpg",
-					icono: "fas fa-beer"
-				},
-				{
-					name: "corona 2",
-					categoria: "cerveza",
-					precio: "12",
-					imagen: "http://www.elefete.com/wp-content/uploads/2018/05/cerveza-corona.jpg",
-					icono: "fas fa-beer"
-				},
-				{
-					name: "corona 3",
-					categoria: "cerveza",
-					precio: "12",
-					imagen: "http://www.elefete.com/wp-content/uploads/2018/05/cerveza-corona.jpg",
-
-					categoria: "cerveza",
-					precio: "123123",
-					imagen: "http://www.elefete.com/wp-content/uploads/2018/05/cerveza-corona.jpg",
-					icono: "fas fa-beer"
-				},
-				{
-					name: "corona 2",
-					categoria: "cerveza",
-					precio: "12",
-					imagen: "http://www.elefete.com/wp-content/uploads/2018/05/cerveza-corona.jpg",
-					icono: "fas fa-beer"
-				},
-				{
-					name: "corona 2",
-					categoria: "cerveza",
-					precio: "12",
-					imagen: "http://www.elefete.com/wp-content/uploads/2018/05/cerveza-corona.jpg",
-					icono: "fas fa-beer"
-				},
-				{
-					name: "corona 3",
-					categoria: "cerveza",
-					precio: "12",
 					imagen: "http://www.elefete.com/wp-content/uploads/2018/05/cerveza-corona.jpg",
 
 					icono: "fas fa-beer"
@@ -450,9 +393,9 @@ const getState = ({ getStore, setStore }) => {
 			//agrega y guarda un elemnto a una lista//
 			agregar: item => {
 				const store = getStore();
-				const tmp = store.lista;
+				const tmp = store.Carrito;
 				tmp.push(item);
-				setStore({ lista: tmp });
+				setStore({ Carrito: tmp });
 				console.log(item);
 			},
 			enviar: item => {
@@ -581,6 +524,14 @@ const getState = ({ getStore, setStore }) => {
 				const store = getStore();
 				setStore({
 					menucervezas: store.menucervezas.filter((e, i) => {
+						return i !== index;
+					})
+				});
+			},
+			borrarCarrito(index) {
+				const store = getStore();
+				setStore({
+					Carrito: store.Carrito.filter((e, i) => {
 						return i !== index;
 					})
 				});

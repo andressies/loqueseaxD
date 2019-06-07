@@ -8,7 +8,7 @@ export default class Navbar2 extends React.Component {
 				<nav id="color6" className="nav-extended">
 					<div className="nav-wrapper">
 						<a href="#!" className="brand-logo">
-							BARTENDER: EDUARDO
+							BARTENDER: Josefina
 						</a>
 
 						<ul className="right hide-on-med-and-down">
@@ -19,12 +19,6 @@ export default class Navbar2 extends React.Component {
 										src="https://www.mygon.com/ImageAdapterV2/campaign/14010/campaign1.jpg"
 									/>
 								</a>
-							</li>
-							<li>
-								<a>A second link</a>
-							</li>
-							<li>
-								<a>A third link</a>
 							</li>
 						</ul>
 					</div>

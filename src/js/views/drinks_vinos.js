@@ -1,6 +1,7 @@
 import ReactDOM from "react-dom";
 import React, { Component } from "react";
 import PropTypes from "prop-types";
+import { Link } from "react-router-dom";
 
 import { Context } from "../store/appContext";
 
@@ -18,8 +19,8 @@ export class DrinksVinos extends React.Component {
 				{({ store, actions }) => {
 					const listaMenu = store.menuvinos.map((item, index) => {
 						return (
-							<div className="row" key={index}>
-								<div className="col s12 m6">
+							<div key={index}>
+								<div className="col s12 m3 l3">
 									<div className="card hoverable">
 										<div className="card-image">
 											<img id="heineken" src={item.imagen} />
@@ -53,17 +54,16 @@ export class DrinksVinos extends React.Component {
 										</a>
 									</div>
 									<div className="nav-content">
-										<a
-											href="https://proyecto-bar--andressies.c9users.io/carrito"
+										<Link
+											to="/carrito"
 											onClick={actions.mostrar}
 											className="btn-floating btn-large halfway-fab waves-effect waves-light teal">
 											<i className="material-icons fas fa-shopping-cart" />
-										</a>
+										</Link>
 									</div>
 								</nav>
 							</div>
-							{listaMenu}
-							<button onClick={() => actions.test()}> </button>;
+							<div className="row">{listaMenu}</div>
 						</div>
 					);
 				}}

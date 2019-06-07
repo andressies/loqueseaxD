@@ -26,7 +26,7 @@ export class ListadoPedidos extends React.Component {
 											<ul>
 												<li>Categoria : {item.categoria}</li>
 
-												<li>Precio : ${item.precio}</li>
+												<li>Precio : {item.precio}</li>
 
 												<li>
 													<a

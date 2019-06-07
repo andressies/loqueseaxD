@@ -78,6 +78,8 @@ export class Layout extends React.Component {
 
 							<Route path="/carrito" component={Carrito} />
 
+							<Route path="/register/view" component={RegisterView} />
+
 							<Route render={() => <h1>Not found!</h1>} />
 						</Switch>
 					</ScrollToTop>

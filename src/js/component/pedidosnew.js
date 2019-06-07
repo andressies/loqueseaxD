@@ -29,7 +29,7 @@ export class Pedidos2 extends React.Component {
 											<ul>
 												<li>Categoria : {item.categoria}</li>
 
-												<li>Precio : ${item.precio}</li>
+												<li>Precio : {item.precio}</li>
 
 												<li>
 													<a

@@ -3,8 +3,13 @@ import React, { Component } from "react";
 import PropTypes from "prop-types";
 import { Navbar } from "../component/navbar.js";
 import { Context } from "../store/appContext";
+import { Link } from "react-router-dom";
+import M from "materialize-css";
 
 export class AdminViewBartenders extends React.Component {
+	componentDidMount() {
+		M.AutoInit();
+	}
 	render() {
 		return (
 			<Context.Consumer>
@@ -81,17 +86,17 @@ export class AdminViewBartenders extends React.Component {
 									</li>
 									<div className="divider" />
 									<li>
-										<a href="https://proyecto-bar--andressies.c9users.io/clientes">
+										<Link to="/clientes">
 											<i className="material-icons fas fa-users" />
 											Users
-										</a>
+										</Link>
 									</li>
 									<li>
 										<a href="#!">
-											<a href="https://proyecto-bar--andressies.c9users.io/user_bartender">
+											<Link to="/user_bartender">
 												<i className="fas fa-user-tie" />
 												Bartender
-											</a>
+											</Link>
 										</a>
 									</li>
 
@@ -103,14 +108,14 @@ export class AdminViewBartenders extends React.Component {
 											</div>
 											<div className="collapsible-body">
 												<li>
-													<a href="https://proyecto-bar--andressies.c9users.io/carta">
+													<Link to="/carta">
 														<span>Cervezas</span>
-													</a>
+													</Link>
 												</li>
 												<li>
-													<a href="https://proyecto-bar--andressies.c9users.io/cartaVinos">
+													<Link to="/cartaVinos">
 														<span>Vinos</span>
-													</a>
+													</Link>
 												</li>
 											</div>
 										</li>
@@ -157,13 +162,13 @@ export class AdminViewBartenders extends React.Component {
 									<div
 										id="card_cliente_img"
 										className="card-image waves-effect waves-block waves-light">
-										<a href="https://proyecto-bar--andressies.c9users.io/register/view">
+										<Link to="/register/view">
 											<img
 												id="user_cliente_img"
 												className="activator"
 												src="https://img.icons8.com/cotton/2x/plus--v1.png"
 											/>
-										</a>
+										</Link>
 									</div>
 									<div className="card-content">
 										<span className="card-title activator grey-text text-darken-4">
